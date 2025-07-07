@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include -I/usr/include/mysql -isystem /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include -g -g -O0 -std=c++20 -o CMakeFiles/instance_messenger_server.dir/source/core/config/manage_config.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/config/manage_config.cpp",
+  "file": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/config/manage_config.cpp"
+},
+{
+  "directory": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include -I/usr/include/mysql -isystem /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include -g -g -O0 -std=c++20 -o CMakeFiles/instance_messenger_server.dir/source/core/database/base_database.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/database/base_database.cpp",
+  "file": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/database/base_database.cpp"
+},
+{
+  "directory": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include -I/usr/include/mysql -isystem /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include -g -g -O0 -std=c++20 -o CMakeFiles/instance_messenger_server.dir/source/core/database/database_mysql.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/database/database_mysql.cpp",
+  "file": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/database/database_mysql.cpp"
+},
+{
+  "directory": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include -I/usr/include/mysql -isystem /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include -g -g -O0 -std=c++20 -o CMakeFiles/instance_messenger_server.dir/source/core/database/database_sqlite.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/database/database_sqlite.cpp",
+  "file": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/database/database_sqlite.cpp"
+},
+{
+  "directory": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include -I/usr/include/mysql -isystem /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include -g -g -O0 -std=c++20 -o CMakeFiles/instance_messenger_server.dir/source/core/log/base_log.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/log/base_log.cpp",
+  "file": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/log/base_log.cpp"
+},
+{
+  "directory": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include -I/usr/include/mysql -isystem /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include -g -g -O0 -std=c++20 -o CMakeFiles/instance_messenger_server.dir/source/core/network/base_network.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/network/base_network.cpp",
+  "file": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/network/base_network.cpp"
+},
+{
+  "directory": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include -I/usr/include/mysql -isystem /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include -g -g -O0 -std=c++20 -o CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/data/access/access_user.cpp",
+  "file": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/data/access/access_user.cpp"
+},
+{
+  "directory": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include -I/usr/include/mysql -isystem /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include -g -g -O0 -std=c++20 -o CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/data/entity/entity_user.cpp",
+  "file": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/data/entity/entity_user.cpp"
+},
+{
+  "directory": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include -I/usr/include/mysql -isystem /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include -g -g -O0 -std=c++20 -o CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/main/check_main.cpp",
+  "file": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/main/check_main.cpp"
+},
+{
+  "directory": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build",
+  "command": "/usr/bin/c++ -DSPDLOG_COMPILED_LIB -I/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include -I/usr/include/mysql -isystem /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include -g -g -O0 -std=c++20 -o CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/main/main.cpp",
+  "file": "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/main/main.cpp"
+}
+]

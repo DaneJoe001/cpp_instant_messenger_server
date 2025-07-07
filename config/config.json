@@ -1,0 +1,24 @@
+{
+    "name": "config",
+    "version": "1.0.0",
+    "config":
+    {
+        "mysql":
+        {
+            "host": "localhost",
+            "port": 3306,
+            "user": "root",
+            "password": "zxcv123456789",
+            "database_name": "database"
+        },
+        "network":
+        {
+            "port": 8080,
+            "ip":"127.0.0.1"
+        },
+        "log":
+        {
+            "path": "log/"
+        }
+    }
+}

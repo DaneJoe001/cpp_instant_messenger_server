@@ -1,0 +1,3 @@
+/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles/instance_messenger_server.dir
+/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles/edit_cache.dir
+/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles/rebuild_cache.dir
