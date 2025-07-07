@@ -139,10 +139,38 @@ CMakeFiles/instance_messenger_server.dir/source/core/log/base_log.cpp.s: cmake_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/instance_messenger_server.dir/source/core/log/base_log.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/log/base_log.cpp -o CMakeFiles/instance_messenger_server.dir/source/core/log/base_log.cpp.s
 
+CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.o: CMakeFiles/instance_messenger_server.dir/flags.make
+CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.o: ../source/core/log/log_danejoe.cpp
+CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.o: CMakeFiles/instance_messenger_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.o -MF CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.o.d -o CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/log/log_danejoe.cpp
+
+CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/log/log_danejoe.cpp > CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.i
+
+CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/log/log_danejoe.cpp -o CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.s
+
+CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.o: CMakeFiles/instance_messenger_server.dir/flags.make
+CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.o: ../source/core/log/manage_log.cpp
+CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.o: CMakeFiles/instance_messenger_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.o -MF CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.o.d -o CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/log/manage_log.cpp
+
+CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/log/manage_log.cpp > CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.i
+
+CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/log/manage_log.cpp -o CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.s
+
 CMakeFiles/instance_messenger_server.dir/source/core/network/base_network.cpp.o: CMakeFiles/instance_messenger_server.dir/flags.make
 CMakeFiles/instance_messenger_server.dir/source/core/network/base_network.cpp.o: ../source/core/network/base_network.cpp
 CMakeFiles/instance_messenger_server.dir/source/core/network/base_network.cpp.o: CMakeFiles/instance_messenger_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/instance_messenger_server.dir/source/core/network/base_network.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/instance_messenger_server.dir/source/core/network/base_network.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/instance_messenger_server.dir/source/core/network/base_network.cpp.o -MF CMakeFiles/instance_messenger_server.dir/source/core/network/base_network.cpp.o.d -o CMakeFiles/instance_messenger_server.dir/source/core/network/base_network.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/core/network/base_network.cpp
 
 CMakeFiles/instance_messenger_server.dir/source/core/network/base_network.cpp.i: cmake_force
@@ -156,7 +184,7 @@ CMakeFiles/instance_messenger_server.dir/source/core/network/base_network.cpp.s:
 CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.o: CMakeFiles/instance_messenger_server.dir/flags.make
 CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.o: ../source/data/access/access_user.cpp
 CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.o: CMakeFiles/instance_messenger_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.o -MF CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.o.d -o CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/data/access/access_user.cpp
 
 CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.i: cmake_force
@@ -170,7 +198,7 @@ CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.s: c
 CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o: CMakeFiles/instance_messenger_server.dir/flags.make
 CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o: ../source/data/entity/entity_user.cpp
 CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o: CMakeFiles/instance_messenger_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o -MF CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o.d -o CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/data/entity/entity_user.cpp
 
 CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.i: cmake_force
@@ -184,7 +212,7 @@ CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.s: c
 CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: CMakeFiles/instance_messenger_server.dir/flags.make
 CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: ../source/main/check_main.cpp
 CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: CMakeFiles/instance_messenger_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o -MF CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o.d -o CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/main/check_main.cpp
 
 CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.i: cmake_force
@@ -198,7 +226,7 @@ CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.s: cmake_for
 CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o: CMakeFiles/instance_messenger_server.dir/flags.make
 CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o: ../source/main/main.cpp
 CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o: CMakeFiles/instance_messenger_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o -MF CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o.d -o CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o -c /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/main/main.cpp
 
 CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.i: cmake_force
@@ -216,6 +244,8 @@ instance_messenger_server_OBJECTS = \
 "CMakeFiles/instance_messenger_server.dir/source/core/database/database_mysql.cpp.o" \
 "CMakeFiles/instance_messenger_server.dir/source/core/database/database_sqlite.cpp.o" \
 "CMakeFiles/instance_messenger_server.dir/source/core/log/base_log.cpp.o" \
+"CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.o" \
+"CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.o" \
 "CMakeFiles/instance_messenger_server.dir/source/core/network/base_network.cpp.o" \
 "CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.o" \
 "CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o" \
@@ -230,6 +260,8 @@ instance_messenger_server: CMakeFiles/instance_messenger_server.dir/source/core/
 instance_messenger_server: CMakeFiles/instance_messenger_server.dir/source/core/database/database_mysql.cpp.o
 instance_messenger_server: CMakeFiles/instance_messenger_server.dir/source/core/database/database_sqlite.cpp.o
 instance_messenger_server: CMakeFiles/instance_messenger_server.dir/source/core/log/base_log.cpp.o
+instance_messenger_server: CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.o
+instance_messenger_server: CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.o
 instance_messenger_server: CMakeFiles/instance_messenger_server.dir/source/core/network/base_network.cpp.o
 instance_messenger_server: CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.o
 instance_messenger_server: CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o
@@ -240,7 +272,7 @@ instance_messenger_server: /usr/local/lib/libSQLiteCpp.a
 instance_messenger_server: /usr/local/lib/libsqlite3.a
 instance_messenger_server: /usr/local/lib/libspdlog.a
 instance_messenger_server: CMakeFiles/instance_messenger_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable instance_messenger_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable instance_messenger_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/instance_messenger_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

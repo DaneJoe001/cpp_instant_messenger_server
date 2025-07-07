@@ -249,6 +249,54 @@ source/core/log/base_log.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/log/base_log.cpp.s
 .PHONY : source/core/log/base_log.cpp.s
 
+source/core/log/log_danejoe.o: source/core/log/log_danejoe.cpp.o
+.PHONY : source/core/log/log_danejoe.o
+
+# target to build an object file
+source/core/log/log_danejoe.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.o
+.PHONY : source/core/log/log_danejoe.cpp.o
+
+source/core/log/log_danejoe.i: source/core/log/log_danejoe.cpp.i
+.PHONY : source/core/log/log_danejoe.i
+
+# target to preprocess a source file
+source/core/log/log_danejoe.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.i
+.PHONY : source/core/log/log_danejoe.cpp.i
+
+source/core/log/log_danejoe.s: source/core/log/log_danejoe.cpp.s
+.PHONY : source/core/log/log_danejoe.s
+
+# target to generate assembly for a file
+source/core/log/log_danejoe.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/log/log_danejoe.cpp.s
+.PHONY : source/core/log/log_danejoe.cpp.s
+
+source/core/log/manage_log.o: source/core/log/manage_log.cpp.o
+.PHONY : source/core/log/manage_log.o
+
+# target to build an object file
+source/core/log/manage_log.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.o
+.PHONY : source/core/log/manage_log.cpp.o
+
+source/core/log/manage_log.i: source/core/log/manage_log.cpp.i
+.PHONY : source/core/log/manage_log.i
+
+# target to preprocess a source file
+source/core/log/manage_log.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.i
+.PHONY : source/core/log/manage_log.cpp.i
+
+source/core/log/manage_log.s: source/core/log/manage_log.cpp.s
+.PHONY : source/core/log/manage_log.s
+
+# target to generate assembly for a file
+source/core/log/manage_log.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/log/manage_log.cpp.s
+.PHONY : source/core/log/manage_log.cpp.s
+
 source/core/network/base_network.o: source/core/network/base_network.cpp.o
 .PHONY : source/core/network/base_network.o
 
@@ -393,6 +441,12 @@ help:
 	@echo "... source/core/log/base_log.o"
 	@echo "... source/core/log/base_log.i"
 	@echo "... source/core/log/base_log.s"
+	@echo "... source/core/log/log_danejoe.o"
+	@echo "... source/core/log/log_danejoe.i"
+	@echo "... source/core/log/log_danejoe.s"
+	@echo "... source/core/log/manage_log.o"
+	@echo "... source/core/log/manage_log.i"
+	@echo "... source/core/log/manage_log.s"
 	@echo "... source/core/network/base_network.o"
 	@echo "... source/core/network/base_network.i"
 	@echo "... source/core/network/base_network.s"

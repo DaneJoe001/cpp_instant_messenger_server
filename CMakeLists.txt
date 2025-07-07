@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.22)
 
 project(InstantMessengerServer LANGUAGES CXX)
 
+if(NOT CMAKE_BUILD_TYPE)
+ set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type" FORCE)
+ endif()
+
 # 设置 CMAKE_TOOLCHAIN_FILE
 if(DEFINED ENV{VCPKG_ROOT})
     set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE STRING "Vcpkg toolchain file")
