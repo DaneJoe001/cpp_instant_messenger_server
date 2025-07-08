@@ -1,0 +1,7 @@
+build/
+.vscode/
+database/*
+log/*
+*.test
+TEST*
+*TEST

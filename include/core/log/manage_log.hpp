@@ -42,7 +42,6 @@ public:
  * @tparam T 日志对象类型
  */
     template<class T>
-
     void add_logger(const BaseLogger::LogConfig& log_config)
     {
         if (m_logger_map.find(log_config.name) != m_logger_map.end())
@@ -69,11 +68,15 @@ private:
      */
     ManageLog(const ManageLog&&) = delete;
     /**
-     * @brief 移动赋值运算符
+     * @brief 赋值运算符
      */
     ManageLog& operator=(const ManageLog&) = delete;
+    /**
+     * @brief 移动赋值运算符
+     */
     ManageLog& operator=(const ManageLog&&) = delete;
 private:
+    /// @brief 日志记录器表
     std::unordered_map<std::string, std::shared_ptr<BaseLogger>> m_logger_map;
     BaseLogger::LogConfig m_default_log_config;
 };

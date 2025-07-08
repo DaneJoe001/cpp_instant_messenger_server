@@ -19,7 +19,7 @@ public:
     /**
      * @brief 构造函数
      */
-    DatabaseMySQL();
+    DatabaseMySQL(std::shared_ptr<BaseLogger> logger);
     /**
      * @brief 析构函数
      */

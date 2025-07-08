@@ -1,8 +1,10 @@
-#include <core/database/database_sqlite.hpp>
+#include "core/util/util_time.hpp"
+#include "core/database/database_sqlite.hpp"
 
 // 确保 SQLite 命名空间的 Database 类已被正确前向声明或包含
 
-DatabaseSQLite::DatabaseSQLite() : m_database(nullptr)
+//DatabaseSQLite::DatabaseSQLite(std::shared_ptr<BaseLogger>)
+DatabaseSQLite::DatabaseSQLite(std::shared_ptr<BaseLogger> logger) :BaseDatabase(logger)
 {
 }
 
@@ -16,10 +18,11 @@ void DatabaseSQLite::connect()
     try
     {
         // 使用 make_unique 创建 SQLite::Database 对象
-        m_database = std::make_unique<SQLite::Database>(m_path, SQLite::OPEN_READWRITE | SQLite::OPEN_CREATE);
+        m_database = std::make_unique<SQLite::Database>(m_config.file_path(), SQLite::OPEN_READWRITE | SQLite::OPEN_CREATE);
     }
     catch (const SQLite::Exception& e)
     {
+        m_logger->error(TIME_STR + " " + __FUNCTION__ + " " + e.what());
         m_error_message = e.what();
         m_error_code = std::to_string(e.getErrorCode());
         throw;
@@ -28,39 +31,44 @@ void DatabaseSQLite::connect()
 
 void DatabaseSQLite::execute(const std::string& statement)
 {
+    m_logger->trace(TIME_STR + "执行查询 " + statement);
     try
     {
         if (!m_database)
         {
+            m_logger->error(TIME_STR + " " + __FUNCTION__ + " Database not connected");
             m_error_message = "Database not connected";
             m_error_code = "-1";
             return;
         }
-        
+
         m_database->exec(statement);
     }
     catch (const SQLite::Exception& e)
     {
         m_error_message = e.what();
         m_error_code = std::to_string(e.getErrorCode());
+        m_logger->error(TIME_STR + " " + __FUNCTION__ + " " + m_error_message);
     }
+    m_logger->trace(TIME_STR + "查询完毕 " + statement);
 }
 
 std::vector<std::vector<std::string>> DatabaseSQLite::query(const std::string& statement)
 {
     std::vector<std::vector<std::string>> result;
-    
+    m_logger->trace(TIME_STR + "执行查询 " + statement);
     try
     {
         if (!m_database)
         {
+            m_logger->error(TIME_STR + " " + __FUNCTION__ + " Database not connected");
             m_error_message = "Database not connected";
             m_error_code = "-1";
             return result;
         }
-        
+
         SQLite::Statement query(*m_database, statement);
-        
+
         while (query.executeStep())
         {
             std::vector<std::string> row;
@@ -76,7 +84,7 @@ std::vector<std::vector<std::string>> DatabaseSQLite::query(const std::string& s
         m_error_message = e.what();
         m_error_code = std::to_string(e.getErrorCode());
     }
-    
+    m_logger->trace(TIME_STR + "查询完毕 " + statement);
     return result;
 }
 

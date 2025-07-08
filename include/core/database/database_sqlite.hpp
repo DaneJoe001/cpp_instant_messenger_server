@@ -13,10 +13,11 @@
 class DatabaseSQLite : public BaseDatabase
 {
 public:
+    DatabaseSQLite() = default;
     /**
      * @brief 构造函数
      */
-    DatabaseSQLite();
+    DatabaseSQLite(std::shared_ptr<BaseLogger> logger);
     /**
      * @brief 析构函数
      */

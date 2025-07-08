@@ -2,6 +2,9 @@
 
 #include <string>
 #include <unordered_map>
+#include <cstdint>
+
+/// @todo 考虑添加时间戳(以配置项或格式化字符串给出)
 /**
  * @class BaseLogger
  * @brief 日志基类
@@ -13,7 +16,7 @@ public:
      * @enum LogLevel
      * @brief 日志级别
      */
-    enum class LogLevel
+    enum class LogLevel :int32_t
     {
         /// @brief 追踪级别
         TRACE,
@@ -36,7 +39,7 @@ public:
     {
         /// @brief 日志路径
         std::string path;
-        /// @brief 日志文件名
+        /// @brief 日志文件名(不带后缀)
         std::string name;
         /// @brief 是否在控制台输出
         bool is_console_output = 0;

@@ -129,6 +129,54 @@ instance_messenger_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/build
 .PHONY : instance_messenger_server/fast
 
+source/core/config/config_database.o: source/core/config/config_database.cpp.o
+.PHONY : source/core/config/config_database.o
+
+# target to build an object file
+source/core/config/config_database.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/config/config_database.cpp.o
+.PHONY : source/core/config/config_database.cpp.o
+
+source/core/config/config_database.i: source/core/config/config_database.cpp.i
+.PHONY : source/core/config/config_database.i
+
+# target to preprocess a source file
+source/core/config/config_database.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/config/config_database.cpp.i
+.PHONY : source/core/config/config_database.cpp.i
+
+source/core/config/config_database.s: source/core/config/config_database.cpp.s
+.PHONY : source/core/config/config_database.s
+
+# target to generate assembly for a file
+source/core/config/config_database.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/config/config_database.cpp.s
+.PHONY : source/core/config/config_database.cpp.s
+
+source/core/config/config_log.o: source/core/config/config_log.cpp.o
+.PHONY : source/core/config/config_log.o
+
+# target to build an object file
+source/core/config/config_log.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/config/config_log.cpp.o
+.PHONY : source/core/config/config_log.cpp.o
+
+source/core/config/config_log.i: source/core/config/config_log.cpp.i
+.PHONY : source/core/config/config_log.i
+
+# target to preprocess a source file
+source/core/config/config_log.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/config/config_log.cpp.i
+.PHONY : source/core/config/config_log.cpp.i
+
+source/core/config/config_log.s: source/core/config/config_log.cpp.s
+.PHONY : source/core/config/config_log.s
+
+# target to generate assembly for a file
+source/core/config/config_log.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/config/config_log.cpp.s
+.PHONY : source/core/config/config_log.cpp.s
+
 source/core/config/manage_config.o: source/core/config/manage_config.cpp.o
 .PHONY : source/core/config/manage_config.o
 
@@ -426,6 +474,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... instance_messenger_server"
+	@echo "... source/core/config/config_database.o"
+	@echo "... source/core/config/config_database.i"
+	@echo "... source/core/config/config_database.s"
+	@echo "... source/core/config/config_log.o"
+	@echo "... source/core/config/config_log.i"
+	@echo "... source/core/config/config_log.s"
 	@echo "... source/core/config/manage_config.o"
 	@echo "... source/core/config/manage_config.i"
 	@echo "... source/core/config/manage_config.s"

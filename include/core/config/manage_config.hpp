@@ -1,9 +1,17 @@
+#pragma once
+
 #include <unordered_map>
 #include <string>
+
+/// @brief 控制是否在配置管理中在控制台输出
+/// @note 配置类构建在日志类之前，就不打算引入日志管理了
+/// @details 0:TRACE 1:DEBUG 2:INFO 3:WARN 4:ERROR 5:FATAL 6:OFF
+#define CONSOLE_OUTPUT_LEVEL 0
 
 /**
  * @file manage_config.hpp
  * @brief 配置文件管理
+ * @details 配置文件使用json格式进行存储
  * @author DaneJoe001
  * @date 20250620
  */
@@ -29,7 +37,7 @@ public:
      */
     void load_config();
     /**
-     * @brief 保存配置文件 
+     * @brief 保存配置文件
      */
     void save_config();
     /**
@@ -52,8 +60,9 @@ private:
     void parse_config(const std::string& path);
 private:
     /// @brief 配置文件路径
-    std::string m_config_path;
+    std::string m_config_path = "./config/default.json";
     /// @brief 配置项
+    /// @example {database,{host,127.0.0.1},{port,3306}...}
     std::unordered_map<std::string, std::unordered_map<std::string, std::string>> m_config_map;
 
 };

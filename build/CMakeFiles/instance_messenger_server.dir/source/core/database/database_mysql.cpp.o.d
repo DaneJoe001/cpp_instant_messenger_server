@@ -274,4 +274,18 @@ CMakeFiles/instance_messenger_server.dir/source/core/database/database_mysql.cpp
  /usr/include/inttypes.h /usr/include/cppconn/resultset.h \
  /usr/include/cppconn/resultset_metadata.h \
  /usr/include/cppconn/datatype.h /usr/include/cppconn/resultset.h \
- /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/database/base_database.hpp
+ /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/database/base_database.hpp \
+ /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/log/base_log.hpp \
+ /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/util/util_time.hpp \
+ /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
+ /usr/include/c++/11/limits /usr/include/c++/11/ctime \
+ /usr/include/c++/11/bits/parse_numbers.h /usr/include/c++/11/sstream \
+ /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iomanip \
+ /usr/include/c++/11/locale \
+ /usr/include/c++/11/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/11/bits/locale_conv.h \
+ /usr/include/c++/11/bits/quoted_string.h

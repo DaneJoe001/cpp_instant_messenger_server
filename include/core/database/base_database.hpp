@@ -3,8 +3,13 @@
 #include <string>
 #include <cstdint>
 #include <vector>
+#include <memory>
 
+#include "core/log/base_log.hpp"
 /// @todo 使用format
+/// @todo 考虑是否添加文件名后缀
+/// @note sqlite应该需要以.db结束,mysql等可能不需要
+/// @todo 在配置项中实现对数据库的类型选择(如mysql和sqlite)
 
 /// 设计一个arg函数拓展，填充位置只要查询当前位置最小的地方即可，不对，不能用arg的方式，还是得用多参的方式传递
 
@@ -39,6 +44,29 @@ public:
 class BaseDatabase
 {
 public:
+    /**
+     * @struct DatabaseConfig 数据库配置结构体
+     */
+    struct DatabaseConfig
+    {
+        /// @brief 数据库名称。
+        std::string database_name;
+        /// @brief 数据库路径。
+        std::string path;
+        /// @brief 用户名。
+        std::string user_name;
+        /// @brief 用户密码。
+        std::string user_password;
+        /**
+         * @return 文件路径
+         */
+        std::string file_path()const
+        {
+            return path + database_name;
+        }
+    };
+public:
+    BaseDatabase(std::shared_ptr<BaseLogger> logger);
     /**
      * @brief 连接到数据库。
      * @note 该方法必须被实现。
@@ -82,18 +110,17 @@ public:
      * @param database_name 数据库名称。
      */
     void set_database_name(const std::string& database_name);
+    /**
+     * @brief 设置数据库配置。
+     */
+    void set_config(const DatabaseConfig& config);
 
 protected:
+    /// @brief 日志记录器
+    std::shared_ptr<BaseLogger> m_logger;
+    DatabaseConfig m_config;
     /// @brief 错误信息
     std::string m_error_message;
     /// @brief 错误码
     std::string m_error_code;
-    /// @brief 数据库路径
-    std::string m_path;
-    /// @brief 用户名
-    std::string m_user_name;
-    /// @brief 密码
-    std::string m_user_password;
-    /// @brief 数据库名称
-    std::string m_database_name;
 };

@@ -1,6 +1,6 @@
-#include <core/database/database_mysql.hpp>
-
-DatabaseMySQL::DatabaseMySQL() : m_driver(nullptr), m_connection(nullptr) {}
+#include "core/database/database_mysql.hpp"
+#include "core/util/util_time.hpp"
+DatabaseMySQL::DatabaseMySQL(std::shared_ptr<BaseLogger> logger) : BaseDatabase(logger), m_connection(nullptr) {}
 
 DatabaseMySQL::~DatabaseMySQL()
 {
@@ -9,14 +9,14 @@ DatabaseMySQL::~DatabaseMySQL()
     {
         try
         {
-            std::cout << "关闭 MySQL 连接..." << std::endl;
+            m_logger->info(TIME_STR + "关闭 MySQL 链接...");
             m_connection->close();
             m_connection.reset();
-            std::cout << "MySQL 连接已关闭" << std::endl;
+            m_logger->info(TIME_STR + "已关闭 MySQL 链接...");
         }
         catch (const std::exception& e)
         {
-            std::cerr << "关闭 MySQL 连接时发生异常: " << e.what() << std::endl;
+            m_logger->error(TIME_STR + "关闭 MySQL 链接时发生异常: " + std::string(e.what()));
         }
     }
 
@@ -27,37 +27,36 @@ DatabaseMySQL::~DatabaseMySQL()
 void DatabaseMySQL::connect() {
     try
     {
-        std::cout << "正在连接到 MySQL 数据库..." << std::endl;
-        std::cout << "路径: " << m_path << std::endl;
-        std::cout << "用户名: " << m_user_name << std::endl;
-        std::cout << "数据库: " << m_database_name << std::endl;
+        m_logger->info(TIME_STR + "正在连接到 MySQL 数据库...");
+        m_logger->info("数据库信息" + m_config.database_name + m_config.file_path() + m_config.user_name + m_config.user_password);
 
         // 创建新的驱动实例，而不是使用静态实例
         m_driver = std::unique_ptr<sql::mysql::MySQL_Driver>(new sql::mysql::MySQL_Driver());
 
         // 创建连接
-        m_connection = std::unique_ptr<sql::Connection>(m_driver->connect(m_path, m_user_name, m_user_password));
+        m_connection = std::unique_ptr<sql::Connection>(m_driver->connect(m_config.path, m_config.user_name, m_config.user_password));
 
         // 检查连接是否成功
         if (!m_connection)
         {
+            m_logger->error(TIME_STR + "无法创建数据库连接");
             m_error_message = "无法创建数据库连接";
             std::cerr << "错误: " << m_error_message << std::endl;
             throw sql::SQLException(m_error_message);
         }
 
         // 设置要使用的数据库
-        m_connection->setSchema(m_database_name);
+        m_connection->setSchema(m_config.database_name);
 
-        std::cout << "MySQL 数据库连接成功!" << std::endl;
+        m_logger->info("MySQL 数据库连接成功!");
     }
     catch (sql::SQLException& e)
     {
         m_error_message = e.what();
         m_error_code = std::to_string(e.getErrorCode());
-        std::cerr << "MySQL 连接错误: " << m_error_message << std::endl;
-        std::cerr << "MySQL 错误代码: " << m_error_code << std::endl;
-        std::cerr << "SQL 状态: " << e.getSQLState() << std::endl;
+        m_logger->error("MySQL 错误码: " + m_error_code);
+        m_logger->error("MySQL 错误信息: " + m_error_message);
+        m_logger->error("MySQL 错误位置: " + std::string(e.getSQLState()));
         throw;
     }
 }
@@ -70,11 +69,11 @@ void DatabaseMySQL::execute(const std::string& statement)
         {
             m_error_message = "数据库未连接";
             m_error_code = "-1";
-            std::cerr << "错误: " << m_error_message << std::endl;
+            m_logger->error("MySQL 错误码: " + m_error_code);
+            m_logger->error("MySQL 错误信息: " + m_error_message);
             return;
         }
-
-        std::cout << "执行 SQL: " << statement << std::endl;
+        m_logger->trace(TIME_STR + "执行 SQL: " + statement);
 
         // 对于非查询操作，使用 executeUpdate 而不是 executeQuery
         std::unique_ptr<sql::Statement> stmt(m_connection->createStatement());
@@ -84,13 +83,13 @@ void DatabaseMySQL::execute(const std::string& statement)
         {
             // 对于查询语句，使用 executeQuery
             std::unique_ptr<sql::ResultSet> res(stmt->executeQuery(statement));
-            std::cout << "查询执行成功" << std::endl;
+            m_logger->trace(TIME_STR + "查询执行成功");
         }
         else
         {
             // 对于非查询语句，使用 executeUpdate
             int updateCount = stmt->executeUpdate(statement);
-            std::cout << "更新执行成功，影响行数: " << updateCount << std::endl;
+            m_logger->trace(TIME_STR + "更新执行成功,影响行数: " + std::to_string(updateCount));
         }
 
         // 检查警告
@@ -99,15 +98,15 @@ void DatabaseMySQL::execute(const std::string& statement)
         {
             m_error_message = warning->getMessage();
             m_error_code = std::to_string(warning->getErrorCode());
-            std::cerr << "执行语句警告: " << m_error_message << std::endl;
+            m_logger->warn(TIME_STR + "更新执行警告,错误码: " + m_error_code + ",错误信息: " + m_error_message);
         }
     }
     catch (sql::SQLException& e)
     {
         m_error_message = e.what();
         m_error_code = std::to_string(e.getErrorCode());
-        std::cerr << "MySQL 执行错误: " << m_error_message << std::endl;
-        std::cerr << "SQL 状态: " << e.getSQLState() << std::endl;
+        m_logger->error(TIME_STR + "MySQL 执行错误: " + m_error_message);
+        m_logger->error(TIME_STR + "SQL 状态: " + e.getSQLState());
     }
 }
 
@@ -121,18 +120,18 @@ std::vector<std::vector<std::string>> DatabaseMySQL::query(const std::string& st
         {
             m_error_message = "数据库未连接";
             m_error_code = "-1";
-            std::cerr << "错误: " << m_error_message << std::endl;
+            m_logger->error(TIME_STR + "数据库未连接");
             return result;
         }
 
-        std::cout << "查询 SQL: " << statement << std::endl;
+        m_logger->trace(TIME_STR + "查询 SQL: " + statement);
 
         // 使用智能指针管理资源
         std::unique_ptr<sql::Statement> stmt(m_connection->createStatement());
         std::unique_ptr<sql::ResultSet> res(stmt->executeQuery(statement));
 
         std::size_t column_count = res->getMetaData()->getColumnCount();
-        std::cout << "查询结果列数: " << column_count << std::endl;
+        m_logger->trace(TIME_STR + "查询结果列数: " + std::to_string(column_count));
 
         // 处理结果
         while (res->next())
@@ -145,7 +144,7 @@ std::vector<std::vector<std::string>> DatabaseMySQL::query(const std::string& st
             result.push_back(row);
         }
 
-        std::cout << "查询结果行数: " << result.size() << std::endl;
+        m_logger->trace("查询结果行数: " + std::to_string(result.size()));
 
         // 检查警告
         const sql::SQLWarning* warning = stmt->getWarnings();
@@ -153,15 +152,15 @@ std::vector<std::vector<std::string>> DatabaseMySQL::query(const std::string& st
         {
             m_error_message = warning->getMessage();
             m_error_code = std::to_string(warning->getErrorCode());
-            std::cerr << "查询语句警告: " << m_error_message << std::endl;
+            m_logger->warn("查询语句警告: " + m_error_message);
         }
     }
     catch (sql::SQLException& e)
     {
         m_error_message = e.what();
         m_error_code = std::to_string(e.getErrorCode());
-        std::cerr << "MySQL 查询错误: " << m_error_message << std::endl;
-        std::cerr << "SQL 状态: " << e.getSQLState() << std::endl;
+        m_logger->error("查询语句错误: " + m_error_message);
+        m_logger->error("SQL 状态: " + e.getSQLState());
     }
 
     return result;

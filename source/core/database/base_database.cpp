@@ -12,22 +12,45 @@ BaseStatement& BaseStatement::arg(const T& value)
     return *this;
 }
 
+BaseDatabase::BaseDatabase(std::shared_ptr<BaseLogger> logger) : m_logger(logger) {}
+
 void BaseDatabase::set_path(const std::string& path)
 {
-    m_path = path;
+    if (path.empty())
+    {
+        m_logger->warn("path is empty");
+    }
+    m_config.path = path;
 }
 
 void BaseDatabase::set_user_name(const std::string& user_name)
 {
-    m_user_name = user_name;
+    if (user_name.empty())
+    {
+        m_logger->warn("user_name is empty");
+    }
+    m_config.user_name = user_name;
 }
 
 void BaseDatabase::set_user_password(const std::string& user_password)
 {
-    m_user_password = user_password;
+    if (user_password.empty())
+    {
+        m_logger->warn("user_password is empty");
+    }
+    m_config.user_password = user_password;
 }
 
 void BaseDatabase::set_database_name(const std::string& database_name)
 {
-    m_database_name = database_name;
+    if (database_name.empty())
+    {
+        m_logger->warn("database_name is empty");
+    }
+    m_config.database_name = database_name;
+}
+
+void BaseDatabase::set_config(const DatabaseConfig& config)
+{
+    m_config = config;
 }

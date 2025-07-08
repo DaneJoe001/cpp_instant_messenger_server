@@ -305,4 +305,8 @@ CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: \
  /usr/include/c++/11/fstream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
- /usr/include/c++/11/bits/fstream.tcc
+ /usr/include/c++/11/bits/fstream.tcc \
+ /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/config/manage_config.hpp \
+ /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/config/config_log.hpp \
+ /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/util/util_time.hpp \
+ /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/config/config_database.hpp

@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/instance_messenger_server.dir/source/core/config/config_database.cpp.o"
+  "CMakeFiles/instance_messenger_server.dir/source/core/config/config_database.cpp.o.d"
+  "CMakeFiles/instance_messenger_server.dir/source/core/config/config_log.cpp.o"
+  "CMakeFiles/instance_messenger_server.dir/source/core/config/config_log.cpp.o.d"
   "CMakeFiles/instance_messenger_server.dir/source/core/config/manage_config.cpp.o"
   "CMakeFiles/instance_messenger_server.dir/source/core/config/manage_config.cpp.o.d"
   "CMakeFiles/instance_messenger_server.dir/source/core/database/base_database.cpp.o"
