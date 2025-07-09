@@ -62,6 +62,6 @@ private:
      */
     void output(LogLevel level, const std::string& log_info);
 private:
-    /// @brief 日志文件liu
+    /// @brief 日志文件流
     std::ofstream m_file_out;
 };

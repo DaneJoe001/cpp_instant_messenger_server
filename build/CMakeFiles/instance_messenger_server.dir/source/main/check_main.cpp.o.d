@@ -307,6 +307,93 @@ CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/config/manage_config.hpp \
+ /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/util/util_json.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/json.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/adl_serializer.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/abi_macros.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/from_json.hpp \
+ /usr/include/c++/11/forward_list /usr/include/c++/11/bits/forward_list.h \
+ /usr/include/c++/11/bits/forward_list.tcc /usr/include/c++/11/valarray \
+ /usr/include/c++/11/cmath /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+ /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+ /usr/include/c++/11/bits/specfun.h /usr/include/c++/11/tr1/gamma.tcc \
+ /usr/include/c++/11/tr1/special_function_util.h \
+ /usr/include/c++/11/tr1/bessel_function.tcc \
+ /usr/include/c++/11/tr1/beta_function.tcc \
+ /usr/include/c++/11/tr1/ell_integral.tcc \
+ /usr/include/c++/11/tr1/exp_integral.tcc \
+ /usr/include/c++/11/tr1/hypergeometric.tcc \
+ /usr/include/c++/11/tr1/legendre_function.tcc \
+ /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+ /usr/include/c++/11/tr1/poly_hermite.tcc \
+ /usr/include/c++/11/tr1/poly_laguerre.tcc \
+ /usr/include/c++/11/tr1/riemann_zeta.tcc \
+ /usr/include/c++/11/bits/valarray_array.h \
+ /usr/include/c++/11/bits/valarray_array.tcc \
+ /usr/include/c++/11/bits/valarray_before.h \
+ /usr/include/c++/11/bits/slice_array.h \
+ /usr/include/c++/11/bits/valarray_after.h \
+ /usr/include/c++/11/bits/gslice.h \
+ /usr/include/c++/11/bits/gslice_array.h \
+ /usr/include/c++/11/bits/mask_array.h \
+ /usr/include/c++/11/bits/indirect_array.h \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/exceptions.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/value_t.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_scope.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/detected.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/void_t.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/string_escape.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/input/position_t.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/cpp_future.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/type_traits.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iterator_traits.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/call_std/begin.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/call_std/end.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/json_fwd.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/string_concat.hpp \
+ /usr/include/c++/11/cstring \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/identity_tag.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/std_fs.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/to_json.hpp \
+ /usr/include/c++/11/optional \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+ /usr/include/c++/11/ranges \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/string_utils.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/byte_container_with_subtype.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/hash.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/input/binary_reader.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/input/input_adapters.hpp \
+ /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
+ /usr/include/c++/11/pstl/glue_numeric_defs.h \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/input/json_sax.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/input/lexer.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/is_sax.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/input/parser.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/internal_iterator.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iter_impl.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/json_custom_base_class.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/json_pointer.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/json_ref.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/output/binary_writer.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/output/output_adapters.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/output/serializer.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/to_chars.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/ordered_map.hpp \
+ /usr/include/c++/11/any \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_unscope.hpp \
+ /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/util/util_define.hpp \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/config/config_log.hpp \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/util/util_time.hpp \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/config/config_database.hpp

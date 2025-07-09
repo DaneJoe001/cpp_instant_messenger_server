@@ -22,6 +22,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/data/entity/entity_user.cpp" "CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o" "gcc" "CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o.d"
   "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/main/check_main.cpp" "CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o" "gcc" "CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o.d"
   "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/main/main.cpp" "CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o" "gcc" "CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o.d"
+  "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/util/util_json.cpp" "CMakeFiles/instance_messenger_server.dir/source/util/util_json.cpp.o" "gcc" "CMakeFiles/instance_messenger_server.dir/source/util/util_json.cpp.o.d"
   )
 
 # Targets to which this target links.

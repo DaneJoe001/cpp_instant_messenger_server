@@ -9,32 +9,7 @@
 #include "core/config/config_log.hpp"
 #include "core/util/util_time.hpp"
 #include "core/config/config_database.hpp"
-
-void set_test_config()
-{
-    ManageConfig& manage_config = ManageConfig::get_instance();
-
-    /// @brief 添加日志基础配置
-    manage_config.add_config("LOG", "path", "./log/");
-    // manage_config.add_config("LOG", "path", "/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/log/");
-    manage_config.add_config("LOG", "name", "TEST");
-    manage_config.add_config("LOG", "is_console_output", "1");
-    manage_config.add_config("LOG", "is_file_output", "1");
-    manage_config.add_config("LOG", "console_log_level", std::to_string((int32_t)BaseLogger::LogLevel::TRACE));
-    manage_config.add_config("LOG", "file_log_level", std::to_string((int32_t)BaseLogger::LogLevel::TRACE));
-
-    /// @brief 添加数据库基础配置
-    manage_config.add_config("DATABASE", "database_name", "TEST.db");
-    manage_config.add_config("DATABASE", "path", "./database/");
-    manage_config.add_config("DATABASE", "user_name", "root");
-    manage_config.add_config("DATABASE", "user_password", "nopassword");
-
-    BaseLogger::LogConfig log_config = ConfigLog(manage_config).get_config();
-    ManageLog::get_instance().add_logger<LogDaneJoe>(log_config);
-
-}
-
-
+#include "core/util/util_json.hpp"
 void check_sqlite()
 {
     try
@@ -150,4 +125,25 @@ void check_config_database()
 
     BaseDatabase::DatabaseConfig database_config = ConfigDatabase(manage_config).get_config();
     std::cout << ConfigDatabase(manage_config).get_config_str() << std::endl;
+}
+
+void check_util_json()
+{
+    ManageConfig& manage_config = ManageConfig::get_instance();
+    // manage_config.set_config_path("./config/config.json");
+    manage_config.set_config_path("/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/config/config.json");
+    manage_config.load_config();
+
+    ConfigDatabase config_database(manage_config);
+    std::cout << config_database.get_config_str() << std::endl;
+
+    ConfigLog config_log(manage_config);
+    std::cout << config_log.get_config_str() << std::endl;
+
+    // UtilJson util_json;
+    // util_json.load_json_from_path("/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/config/TEST.json");
+    // std::string result = util_json.get_value<std::string>("name", "not_found");
+    // std::cout << "[INFO] " << result << std::endl;
+    // util_json.save_json_to_path("/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/config/TEST2.json");
+
 }

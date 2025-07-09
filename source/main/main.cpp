@@ -3,11 +3,9 @@
 #include <core/network/base_network.hpp>
 #include <main/check_main.hpp>
 
-#define CHECK 5
+#define CHECK 6
 int main(void)
 {
-
-    set_test_config();
 
 #if CHECK==0
     std::cout << "Check DaneJoe001's log" << std::endl;
@@ -37,6 +35,11 @@ int main(void)
 #if CHECK==5
     std::cout << "Check SQLite" << std::endl;
     check_sqlite();
+#endif
+
+#if CHECK==6
+    std::cout << "Check UtilJson" << std::endl;
+    check_util_json();
 #endif
     return 0;
 }

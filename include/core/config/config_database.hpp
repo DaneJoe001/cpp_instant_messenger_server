@@ -5,6 +5,17 @@
 #include "core/config/manage_config.hpp"
 #include "core/database/base_database.hpp"
 
+/// @todo 调整配置结构
+/// @brief 数据库配置项名称字符串
+#define DATABASE_ITEM_STR std::string("sqlite")
+/// @brief 数据库名称字符串
+#define DATABASE_NAME_STR std::string("database_name")
+/// @brief 数据库路径字符串
+#define DATABASE_PATH_STR std::string("path")
+/// @brief 数据库用户名字符串
+#define DATABASE_USER_NAME_STR std::string("user_name")
+#define DATABASE_USER_PASSWORD_STR std::string("user_password")
+
 /**
  * @class ConfigDatabase
  * @brief 数据库配置类

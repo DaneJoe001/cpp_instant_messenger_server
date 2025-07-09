@@ -27,6 +27,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o.d"
   "CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o"
   "CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o.d"
+  "CMakeFiles/instance_messenger_server.dir/source/util/util_json.cpp.o"
+  "CMakeFiles/instance_messenger_server.dir/source/util/util_json.cpp.o.d"
   "instance_messenger_server"
   "instance_messenger_server.pdb"
 )

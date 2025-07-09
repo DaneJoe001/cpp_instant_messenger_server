@@ -465,6 +465,30 @@ source/main/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.s
 .PHONY : source/main/main.cpp.s
 
+source/util/util_json.o: source/util/util_json.cpp.o
+.PHONY : source/util/util_json.o
+
+# target to build an object file
+source/util/util_json.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/util/util_json.cpp.o
+.PHONY : source/util/util_json.cpp.o
+
+source/util/util_json.i: source/util/util_json.cpp.i
+.PHONY : source/util/util_json.i
+
+# target to preprocess a source file
+source/util/util_json.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/util/util_json.cpp.i
+.PHONY : source/util/util_json.cpp.i
+
+source/util/util_json.s: source/util/util_json.cpp.s
+.PHONY : source/util/util_json.s
+
+# target to generate assembly for a file
+source/util/util_json.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/util/util_json.cpp.s
+.PHONY : source/util/util_json.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -516,6 +540,9 @@ help:
 	@echo "... source/main/main.o"
 	@echo "... source/main/main.i"
 	@echo "... source/main/main.s"
+	@echo "... source/util/util_json.o"
+	@echo "... source/util/util_json.i"
+	@echo "... source/util/util_json.s"
 .PHONY : help
 
 

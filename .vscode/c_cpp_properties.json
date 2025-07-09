@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "./include/**",
                 "/usr/include/**",
-                "${workspaceFolder}/include"
+                "${workspaceFolder}/include",
+                "/home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

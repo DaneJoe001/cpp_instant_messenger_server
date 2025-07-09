@@ -1,20 +1,16 @@
+
 #pragma once
 
 #include <unordered_map>
 #include <string>
 
-/// @brief 控制是否在配置管理中在控制台输出
-/// @note 配置类构建在日志类之前，就不打算引入日志管理了
-/// @details 0:TRACE 1:DEBUG 2:INFO 3:WARN 4:ERROR 5:FATAL 6:OFF
-#define CONSOLE_OUTPUT_LEVEL 0
+#include "core/util/util_json.hpp"
+#include "core/util/util_define.hpp"
 
-/**
- * @file manage_config.hpp
- * @brief 配置文件管理
- * @details 配置文件使用json格式进行存储
- * @author DaneJoe001
- * @date 20250620
- */
+/// @brief 配置项字符串
+#define CONFIG_ITEM_STR std::string("config")
+/// @brief 默认配置文件路径
+#define DEFAULT_CONFIG_PATH std::string("./config/default_config.json")
 
  /**
   * @class ManageConfig
@@ -42,6 +38,11 @@ public:
     void save_config();
     /**
      * @brief 获取配置项
+     * @param config_type 配置项类型
+     */
+    std::unordered_map<std::string, std::string> get_config(const std::string& config_type);
+    /**
+     * @brief 获取配置项
      * @param config_type 配置类型
      * @param config_key 配置项
      */
@@ -52,6 +53,12 @@ public:
      * @param config_key 配置项
      */
     void add_config(const std::string& config_type, const std::string& config_key, const std::string& config_value);
+    /**
+     * @brief 添加配置项
+     * @param config_type 配置类型
+     * @param config_map 配置项
+     */
+    void add_config(const std::string& config_type, std::unordered_map<std::string, std::string> config_map);
 private:
     /**
      * @brief 解析配置文件
@@ -60,9 +67,8 @@ private:
     void parse_config(const std::string& path);
 private:
     /// @brief 配置文件路径
-    std::string m_config_path = "./config/default.json";
+    std::string m_config_path = DEFAULT_CONFIG_PATH;
     /// @brief 配置项
-    /// @example {database,{host,127.0.0.1},{port,3306}...}
     std::unordered_map<std::string, std::unordered_map<std::string, std::string>> m_config_map;
 
 };

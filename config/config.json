@@ -3,6 +3,16 @@
     "version": "1.0.0",
     "config":
     {
+        "log":
+        {
+            "path":"./log/",
+            "name": "CONFIG_LOG",
+            "is_console_output": true,
+            "is_file_output": true,
+            "console_log_level":0,
+            "file_log_level":0
+
+        },
         "mysql":
         {
             "host": "localhost",
@@ -11,14 +21,15 @@
             "password": "zxcv123456789",
             "database_name": "database"
         },
+        "sqlite":
+        {
+            "database_name": "CONFIG_SQLITE",
+            "path": "./database/"
+        },
         "network":
         {
             "port": 8080,
             "ip":"127.0.0.1"
-        },
-        "log":
-        {
-            "path": "log/"
         }
     }
 }
