@@ -35,7 +35,7 @@ bool UtilJson::load_json_from_path(const std::string& path)
     }
     catch (const std::exception& e)
     {
-#if CONSOLE_OUTPUT_LEVEL <= 3
+#if CONSOLE_OUTPUT_LEVEL <= CONSOLE_LEVEL_ERROR
         std::cout << "[ERROR] JSON解析错误" << std::endl;
 #endif
         return false;
@@ -71,8 +71,10 @@ bool UtilJson::save_json_to_path(const std::string& path)
             std::cout << "[ERROR] JSON文件打开失败" << std::endl;
             return false;
         }
-        //添加缩进
+        /// @note 使用std::ofstream输出文件时存在不区分大小写的情况
+        /// @brief 添加缩进
         json_file << m_json.dump(4);
+        std::cout << "[INFO] JSON文件保存成功" << std::endl;
         return true;
     }
     catch (const std::exception& e)
@@ -81,4 +83,9 @@ bool UtilJson::save_json_to_path(const std::string& path)
         return false;
     }
     return false;
+}
+
+nlohmann::json UtilJson::get_json()
+{
+    return m_json;
 }

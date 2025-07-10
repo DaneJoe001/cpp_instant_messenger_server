@@ -9,14 +9,14 @@ DatabaseMySQL::~DatabaseMySQL()
     {
         try
         {
-            m_logger->info(TIME_STR + "关闭 MySQL 链接...");
+            m_logger->info("关闭 MySQL 链接...");
             m_connection->close();
             m_connection.reset();
-            m_logger->info(TIME_STR + "已关闭 MySQL 链接...");
+            m_logger->info("已关闭 MySQL 链接...");
         }
         catch (const std::exception& e)
         {
-            m_logger->error(TIME_STR + "关闭 MySQL 链接时发生异常: " + std::string(e.what()));
+            m_logger->error("关闭 MySQL 链接时发生异常: " + std::string(e.what()));
         }
     }
 
@@ -27,7 +27,7 @@ DatabaseMySQL::~DatabaseMySQL()
 void DatabaseMySQL::connect() {
     try
     {
-        m_logger->info(TIME_STR + "正在连接到 MySQL 数据库...");
+        m_logger->info("正在连接到 MySQL 数据库...");
         m_logger->info("数据库信息" + m_config.database_name + m_config.file_path() + m_config.user_name + m_config.user_password);
 
         // 创建新的驱动实例，而不是使用静态实例
@@ -39,7 +39,7 @@ void DatabaseMySQL::connect() {
         // 检查连接是否成功
         if (!m_connection)
         {
-            m_logger->error(TIME_STR + "无法创建数据库连接");
+            m_logger->error("无法创建数据库连接");
             m_error_message = "无法创建数据库连接";
             std::cerr << "错误: " << m_error_message << std::endl;
             throw sql::SQLException(m_error_message);
@@ -73,7 +73,7 @@ void DatabaseMySQL::execute(const std::string& statement)
             m_logger->error("MySQL 错误信息: " + m_error_message);
             return;
         }
-        m_logger->trace(TIME_STR + "执行 SQL: " + statement);
+        m_logger->trace("执行 SQL: " + statement);
 
         // 对于非查询操作，使用 executeUpdate 而不是 executeQuery
         std::unique_ptr<sql::Statement> stmt(m_connection->createStatement());
@@ -83,13 +83,13 @@ void DatabaseMySQL::execute(const std::string& statement)
         {
             // 对于查询语句，使用 executeQuery
             std::unique_ptr<sql::ResultSet> res(stmt->executeQuery(statement));
-            m_logger->trace(TIME_STR + "查询执行成功");
+            m_logger->trace("查询执行成功");
         }
         else
         {
             // 对于非查询语句，使用 executeUpdate
             int updateCount = stmt->executeUpdate(statement);
-            m_logger->trace(TIME_STR + "更新执行成功,影响行数: " + std::to_string(updateCount));
+            m_logger->trace("更新执行成功,影响行数: " + std::to_string(updateCount));
         }
 
         // 检查警告
@@ -98,15 +98,15 @@ void DatabaseMySQL::execute(const std::string& statement)
         {
             m_error_message = warning->getMessage();
             m_error_code = std::to_string(warning->getErrorCode());
-            m_logger->warn(TIME_STR + "更新执行警告,错误码: " + m_error_code + ",错误信息: " + m_error_message);
+            m_logger->warn("更新执行警告,错误码: " + m_error_code + ",错误信息: " + m_error_message);
         }
     }
     catch (sql::SQLException& e)
     {
         m_error_message = e.what();
         m_error_code = std::to_string(e.getErrorCode());
-        m_logger->error(TIME_STR + "MySQL 执行错误: " + m_error_message);
-        m_logger->error(TIME_STR + "SQL 状态: " + e.getSQLState());
+        m_logger->error("MySQL 执行错误: " + m_error_message);
+        m_logger->error("SQL 状态: " + e.getSQLState());
     }
 }
 
@@ -120,18 +120,18 @@ std::vector<std::vector<std::string>> DatabaseMySQL::query(const std::string& st
         {
             m_error_message = "数据库未连接";
             m_error_code = "-1";
-            m_logger->error(TIME_STR + "数据库未连接");
+            m_logger->error("数据库未连接");
             return result;
         }
 
-        m_logger->trace(TIME_STR + "查询 SQL: " + statement);
+        m_logger->trace("查询 SQL: " + statement);
 
         // 使用智能指针管理资源
         std::unique_ptr<sql::Statement> stmt(m_connection->createStatement());
         std::unique_ptr<sql::ResultSet> res(stmt->executeQuery(statement));
 
         std::size_t column_count = res->getMetaData()->getColumnCount();
-        m_logger->trace(TIME_STR + "查询结果列数: " + std::to_string(column_count));
+        m_logger->trace("查询结果列数: " + std::to_string(column_count));
 
         // 处理结果
         while (res->next())

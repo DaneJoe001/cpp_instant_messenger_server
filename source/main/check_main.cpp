@@ -10,6 +10,7 @@
 #include "core/util/util_time.hpp"
 #include "core/config/config_database.hpp"
 #include "core/util/util_json.hpp"
+#include "core/util/util_print.hpp"
 void check_sqlite()
 {
     try
@@ -93,19 +94,32 @@ void check_danejoe_log()
     ManageLog& manage_log = ManageLog::get_instance();
 
     std::cout << "[TEST] 测试 DaneJoe 日志系统..." << std::endl;
+    // manage_log.get_logger<LogDaneJoe>("TestLog")->set_level_is_visible(true);
+    // manage_log.get_logger<LogDaneJoe>("TestLog")->set_time_is_visible(true);
     manage_log.get_logger<LogDaneJoe>("TestLog")->info("测试日志");
     manage_log.get_logger<LogDaneJoe>("")->info("默认日志");
-    std::cout << "[TEST] 日志系统测试完毕" << std::endl;
+
 }
 
 void check_config_manager()
 {
     ManageConfig& manage_config = ManageConfig::get_instance();
+    manage_config.set_config_path("./config/config.json");
+    manage_config.load_config();
+
     BaseLogger::LogConfig log_config = ConfigLog(manage_config).get_config();
 
     ManageLog& manage_log = ManageLog::get_instance();
     manage_log.add_logger<LogDaneJoe>(log_config);
-    manage_log.get_logger<LogDaneJoe>("TEST")->info("测试日志");
+    manage_log.get_logger<LogDaneJoe>("CONFIG_LOG")->set_file_name_is_visible(true);
+    manage_log.get_logger<LogDaneJoe>("CONFIG_LOG")->set_function_is_visible(true);
+    manage_log.get_logger<LogDaneJoe>("CONFIG_LOG")->set_line_is_visible(true);
+
+    manage_log.get_logger<LogDaneJoe>("")->set_file_name_is_visible(true);
+    manage_log.get_logger<LogDaneJoe>("")->set_function_is_visible(true);
+    manage_log.get_logger<LogDaneJoe>("")->set_line_is_visible(true);
+
+    manage_log.get_logger<LogDaneJoe>("CONFIG_LOG")->info("测试日志");
     manage_log.get_logger<LogDaneJoe>("")->info("默认日志");
     std::cout << "[INFO] :测试完毕" << std::endl;
 
@@ -140,10 +154,12 @@ void check_util_json()
     ConfigLog config_log(manage_config);
     std::cout << config_log.get_config_str() << std::endl;
 
-    // UtilJson util_json;
-    // util_json.load_json_from_path("/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/config/TEST.json");
-    // std::string result = util_json.get_value<std::string>("name", "not_found");
-    // std::cout << "[INFO] " << result << std::endl;
-    // util_json.save_json_to_path("/mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/config/TEST2.json");
+    manage_config.save_config();
 
+}
+void check_util_print()
+{
+    UtilPrint::print("hello world");
+    std::cout << UtilPrint::add_str("hello world", "[", UtilPrint::AddPosition::MIRRORED) << std::endl;
+    UtilPrint::print(UtilPrint::LogLevel::TRACE, "日志测试", UtilPrint::OutputSetting());
 }

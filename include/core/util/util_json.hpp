@@ -60,7 +60,40 @@ public:
         }
         return default_value;
     }
-
+    /**
+     * @brief 设置Json文件中的值
+     * @tparam T 值类型
+     * @param key 键
+     * @param value 值
+     */
+    template<class T>
+    bool set_value(const std::string& key, const T& value)
+    {
+        if (m_json.contains(key))
+        {
+            m_json[key] = value;
+            return true;
+        }
+        return false;
+    }
+    nlohmann::json get_json();
+    /**
+     * @brief 添加键值对
+     * @tparam T 值类型
+     * @param key 键
+     * @param value 值
+     */
+    template<class T>
+    void add_key_and_value(const std::string& key, const T& value)
+    {
+        if (m_json.contains(key))
+        {
+#if CONSOLE_OUTPUT_LEVEL <= CONSOLE_LEVEL_WARN
+            std::cout << "[WARN] 键已存在，请勿重复添加" << std::endl;
+#endif
+        }
+        m_json[key] = value;
+    }
 private:
     /// @brief Json对象
     nlohmann::json m_json;

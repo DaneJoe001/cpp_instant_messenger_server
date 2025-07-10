@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/instance_messenger_server.dir/source/core/config/config_log.cpp.o.d"
   "CMakeFiles/instance_messenger_server.dir/source/core/config/manage_config.cpp.o"
   "CMakeFiles/instance_messenger_server.dir/source/core/config/manage_config.cpp.o.d"
+  "CMakeFiles/instance_messenger_server.dir/source/core/config/manage_config_update.cpp.o"
+  "CMakeFiles/instance_messenger_server.dir/source/core/config/manage_config_update.cpp.o.d"
   "CMakeFiles/instance_messenger_server.dir/source/core/database/base_database.cpp.o"
   "CMakeFiles/instance_messenger_server.dir/source/core/database/base_database.cpp.o.d"
   "CMakeFiles/instance_messenger_server.dir/source/core/database/database_mysql.cpp.o"
@@ -29,6 +31,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o.d"
   "CMakeFiles/instance_messenger_server.dir/source/util/util_json.cpp.o"
   "CMakeFiles/instance_messenger_server.dir/source/util/util_json.cpp.o.d"
+  "CMakeFiles/instance_messenger_server.dir/source/util/util_print.cpp.o"
+  "CMakeFiles/instance_messenger_server.dir/source/util/util_print.cpp.o.d"
   "instance_messenger_server"
   "instance_messenger_server.pdb"
 )

@@ -1,4 +1,10 @@
-
+/**
+ * @file manage_config.hpp
+ * @brief 配置文件管理
+ * @details 配置文件使用json格式进行存储
+ * @author DaneJoe001
+ * @date 20250620
+ */
 #pragma once
 
 #include <unordered_map>

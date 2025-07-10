@@ -22,7 +22,7 @@ void DatabaseSQLite::connect()
     }
     catch (const SQLite::Exception& e)
     {
-        m_logger->error(TIME_STR + " " + __FUNCTION__ + " " + e.what());
+        m_logger->error(e.what());
         m_error_message = e.what();
         m_error_code = std::to_string(e.getErrorCode());
         throw;
@@ -31,12 +31,12 @@ void DatabaseSQLite::connect()
 
 void DatabaseSQLite::execute(const std::string& statement)
 {
-    m_logger->trace(TIME_STR + "执行查询 " + statement);
+    m_logger->trace("执行查询 " + statement);
     try
     {
         if (!m_database)
         {
-            m_logger->error(TIME_STR + " " + __FUNCTION__ + " Database not connected");
+            m_logger->error("Database not connected");
             m_error_message = "Database not connected";
             m_error_code = "-1";
             return;
@@ -48,20 +48,20 @@ void DatabaseSQLite::execute(const std::string& statement)
     {
         m_error_message = e.what();
         m_error_code = std::to_string(e.getErrorCode());
-        m_logger->error(TIME_STR + " " + __FUNCTION__ + " " + m_error_message);
+        m_logger->error(m_error_message);
     }
-    m_logger->trace(TIME_STR + "查询完毕 " + statement);
+    m_logger->trace("查询完毕 " + statement);
 }
 
 std::vector<std::vector<std::string>> DatabaseSQLite::query(const std::string& statement)
 {
     std::vector<std::vector<std::string>> result;
-    m_logger->trace(TIME_STR + "执行查询 " + statement);
+    m_logger->trace("执行查询 " + statement);
     try
     {
         if (!m_database)
         {
-            m_logger->error(TIME_STR + " " + __FUNCTION__ + " Database not connected");
+            m_logger->error(" Database not connected");
             m_error_message = "Database not connected";
             m_error_code = "-1";
             return result;
@@ -84,7 +84,7 @@ std::vector<std::vector<std::string>> DatabaseSQLite::query(const std::string& s
         m_error_message = e.what();
         m_error_code = std::to_string(e.getErrorCode());
     }
-    m_logger->trace(TIME_STR + "查询完毕 " + statement);
+    m_logger->trace("查询完毕 " + statement);
     return result;
 }
 

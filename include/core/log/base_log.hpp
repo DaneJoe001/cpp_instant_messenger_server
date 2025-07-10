@@ -4,6 +4,8 @@
 #include <unordered_map>
 #include <cstdint>
 
+#include "core/util/util_print.hpp"
+
 /// @todo 考虑添加时间戳(以配置项或格式化字符串给出)
 /**
  * @class BaseLogger
@@ -97,7 +99,43 @@ public:
      */
     virtual void fatal(const std::string& log_info) = 0;
     virtual ~BaseLogger() = default;
+    /**
+     * @brief 设置时间是否可见
+     * @param statu 是否可见
+     */
+    void set_time_is_visible(bool statu);
+    /**
+     * @brief 设置日志级别是否可见
+     * @param statu 是否可见
+     */
+    void set_level_is_visible(bool statu);
+    /**
+     * @brief 设置文件名是否可见
+     * @param statu 是否可见
+     */
+    void set_file_name_is_visible(bool statu);
+    /**
+     * @brief 设置行号是否可见
+     * @param statu 是否可见
+     */
+    void set_line_is_visible(bool statu);
+    /**
+     * @brief 设置函数名是否可见
+     * @param statu 是否可见
+     */
+    void set_function_is_visible(bool statu);
+    UtilPrint::OutputSetting get_output_setting();
 protected:
     /// @brief log配置
-    LogConfig m_log_config{};
+    LogConfig m_log_config;
+    /// @brief 时间是否可见
+    bool m_is_time_visible = true;
+    /// @brief 日志级别是否可见
+    bool m_is_level_visible = true;
+    /// @brief 文件名是否可见
+    bool m_is_file_name_visible = false;
+    /// @brief 行号是否可见
+    bool m_is_line_visible = false;
+    /// @brief 函数名是否可见
+    bool m_is_function_visible = false;
 };

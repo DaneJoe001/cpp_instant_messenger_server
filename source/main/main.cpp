@@ -1,45 +1,58 @@
 #include <iostream>
 
-#include <core/network/base_network.hpp>
-#include <main/check_main.hpp>
+#include "core/network/base_network.hpp"
+#include "main/check_main.hpp"
+#include "core/util/util_print.hpp"
 
-#define CHECK 6
+#define CHECK 1
 int main(void)
 {
 
 #if CHECK==0
-    std::cout << "Check DaneJoe001's log" << std::endl;
+    UtilPrint::print("[INFO]", "检查日志系统");
     check_danejoe_log();
 #endif
 
 #if CHECK==1
-    std::cout << "Check Config Manager" << std::endl;
+    UtilPrint::print("[INFO]", "检查配置管理");
     check_config_manager();
 #endif
 
 #if CHECK==2
-    std::cout << "Check UtilTime" << std::endl;
+    UtilPrint::print("[INFO]", "检查时间系统");
     check_util_time();
 #endif
 
 #if CHECK==3
-    std::cout << "Check Config Database" << std::endl;
+    UtilPrint::print("[INFO]", "检查数据库配置");
     check_config_database();
 #endif
 
 #if CHECK==4
-    std::cout << "Check MySQL" << std::endl;
+    UtilPrint::print("[INFO]", "检查MySQL");
     check_mysql();
 #endif
 
 #if CHECK==5
-    std::cout << "Check SQLite" << std::endl;
+    UtilPrint::print("[INFO]", "检查SQLite");
     check_sqlite();
 #endif
 
 #if CHECK==6
-    std::cout << "Check UtilJson" << std::endl;
+    UtilPrint::print("[INFO]", "检查JSON");
     check_util_json();
 #endif
-    return 0;
+
+#if CHECK==7
+    UtilPrint::print("[INFO]", "检查日志系统");
+    check_danejoe_log();
+#endif
+
+#if CHECK==8
+    UtilPrint::print("[INFO]", "检查打印工具");
+    // check_util_print();
+    UtilPrint::print("hello world");
+    std::cout << UtilPrint::add_bracket(UtilPrint::BracketType::SQUARE, "TEST") << std::endl;
+    UtilPrint::print(UtilPrint::LogLevel::TRACE, "日志测试", UtilPrint::OutputSetting());
+#endif
 }

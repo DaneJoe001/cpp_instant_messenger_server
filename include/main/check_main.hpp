@@ -13,3 +13,5 @@ void check_util_time();
 void check_config_database();
 
 void check_util_json();
+
+void check_util_print();

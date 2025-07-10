@@ -1,6 +1,9 @@
 #include <iostream>
+// #include <format>
 
 #include "core/log/log_danejoe.hpp"
+#include "core/util/util_time.hpp"
+#include "core/util/util_print.hpp"
 
 LogDaneJoe::LogDaneJoe(const LogConfig& config) :BaseLogger(config) {}
 
@@ -19,36 +22,37 @@ bool LogDaneJoe::open()
 
 void LogDaneJoe::output(LogLevel level, const std::string& log_info)
 {
-    std::string log_level_str;
+    // std::string log_level_str;
+    UtilPrint::LogLevel log_level;
     switch (level)
     {
-    case LogLevel::DEBUG:
-        log_level_str = "[DEBUG] ";
-        break;
-    case LogLevel::INFO:
-        log_level_str = "[INFO] ";
-        break;
-    case LogLevel::WARN:
-        log_level_str = "[WARN] ";
-        break;
-    case LogLevel::ERROR:
-        log_level_str = "[ERROR] ";
-        break;
-    default:
-        log_level_str = "[UNKNOWN] ";
+    case LogLevel::TRACE:log_level = UtilPrint::LogLevel::TRACE;break;
+    case LogLevel::DEBUG:log_level = UtilPrint::LogLevel::DEBUG;break;
+    case LogLevel::INFO:log_level = UtilPrint::LogLevel::INFO;break;
+    case LogLevel::WARN:log_level = UtilPrint::LogLevel::WARN;break;
+    case LogLevel::ERROR:log_level = UtilPrint::LogLevel::ERROR;break;
+    case LogLevel::FATAL:log_level = UtilPrint::LogLevel::FATAL;break;
+    default:log_level = UtilPrint::LogLevel::TRACE;break;
     }
+    /// @brief UtilPrint的日志格式构建设置
+    UtilPrint::OutputSetting output_setting = get_output_setting();
+    /// @brief 获取日志字符串
+    std::string log_str = UtilPrint::get_log_str(log_level, log_info, output_setting);
+    /// @brief 控制台输出日志
     if (m_log_config.is_console_output && level >= m_log_config.console_log_level)
     {
-        std::cout << log_level_str << log_info << std::endl;
+        UtilPrint::print(log_str);
     }
     if (!m_log_config.file_path().empty() && level >= m_log_config.console_log_level)
     {
         if (!open())
         {
-            std::cerr << "[ERROR] Failed to open log file: " << m_log_config.file_path() << std::endl;
-            return;
+            UtilPrint::print(UtilPrint::LogLevel::ERROR, "打开日志文件失败：" + m_log_config.file_path(), output_setting);
         }
-        m_file_out << log_level_str << log_info << std::endl;
+        {
+            std::lock_guard<std::mutex>lock(m_file_mutex);
+            m_file_out << log_str << std::endl;
+        }
     }
 }
 

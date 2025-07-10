@@ -5,3 +5,5 @@ log/*
 *.test
 TEST*
 *TEST
+CONFIG*
+*CONFIG

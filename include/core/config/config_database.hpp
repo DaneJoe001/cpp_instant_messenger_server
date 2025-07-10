@@ -14,6 +14,7 @@
 #define DATABASE_PATH_STR std::string("path")
 /// @brief 数据库用户名字符串
 #define DATABASE_USER_NAME_STR std::string("user_name")
+/// @brief 数据库用户密码字符串
 #define DATABASE_USER_PASSWORD_STR std::string("user_password")
 
 /**

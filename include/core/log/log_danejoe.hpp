@@ -1,6 +1,7 @@
 #pragma once
 
 #include <fstream>
+#include <mutex>
 
 #include "core/log/base_log.hpp"
 
@@ -64,4 +65,7 @@ private:
 private:
     /// @brief 日志文件流
     std::ofstream m_file_out;
+    /// @brief 文件输出
+    std::mutex m_file_mutex;
+    std::mutex m_console_mutex;
 };

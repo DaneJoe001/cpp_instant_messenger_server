@@ -20,7 +20,7 @@ void ManageConfig::load_config()
     /// @note 尝试打开文件，当指定配置文件不存在时，创建默认配置文件并返回
     if (m_config_path.empty())
     {
-        m_config_path = "./config/default_config.json";
+        m_config_path = DEFAULT_CONFIG_PATH;
         std::ofstream ofs(m_config_path);
 #if CONSOLE_OUTPUT_LEVEL <= CONSOLE_LEVEL_INFO
         std::cout << "[INFO] 创建默认配置文件" << std::endl;
@@ -41,7 +41,26 @@ void ManageConfig::load_config()
 void ManageConfig::save_config()
 {
     /// @todo 将map以json保存至文件
+    UtilJson json;
+    UtilJson config_json;
+    /// @brief 遍历顶层map
+    for (auto& [config_type, config_map] : m_config_map)
+    {
+        UtilJson config_type_json;
+        for (auto& [config_key, value] : config_map)
+        {
+            /// @brief 当前map结构全部使用的是字符串，不是json对象使用的基本数据类型，后续得调整结构
+            config_type_json.add_key_and_value<std::string>(config_key, value);
+        }
+        config_json.add_key_and_value<nlohmann::json>(config_type, config_type_json.get_json());
+    }
+    json.add_key_and_value<nlohmann::json>(CONFIG_ITEM_STR, config_json.get_json());
 
+#if CONSOLE_OUTPUT_LEVEL <= CONSOLE_LEVEL_INFO
+    std::cout << "[INFO] 保存配置文件" << std::endl;
+    std::cout << json.get_json().dump(4) << std::endl;
+#endif
+    config_json.save_json_to_path(m_config_path);
 }
 
 std::unordered_map<std::string, std::string> ManageConfig::get_config(const std::string& config_type)

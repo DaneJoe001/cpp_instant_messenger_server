@@ -201,6 +201,30 @@ source/core/config/manage_config.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/config/manage_config.cpp.s
 .PHONY : source/core/config/manage_config.cpp.s
 
+source/core/config/manage_config_update.o: source/core/config/manage_config_update.cpp.o
+.PHONY : source/core/config/manage_config_update.o
+
+# target to build an object file
+source/core/config/manage_config_update.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/config/manage_config_update.cpp.o
+.PHONY : source/core/config/manage_config_update.cpp.o
+
+source/core/config/manage_config_update.i: source/core/config/manage_config_update.cpp.i
+.PHONY : source/core/config/manage_config_update.i
+
+# target to preprocess a source file
+source/core/config/manage_config_update.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/config/manage_config_update.cpp.i
+.PHONY : source/core/config/manage_config_update.cpp.i
+
+source/core/config/manage_config_update.s: source/core/config/manage_config_update.cpp.s
+.PHONY : source/core/config/manage_config_update.s
+
+# target to generate assembly for a file
+source/core/config/manage_config_update.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/core/config/manage_config_update.cpp.s
+.PHONY : source/core/config/manage_config_update.cpp.s
+
 source/core/database/base_database.o: source/core/database/base_database.cpp.o
 .PHONY : source/core/database/base_database.o
 
@@ -489,6 +513,30 @@ source/util/util_json.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/util/util_json.cpp.s
 .PHONY : source/util/util_json.cpp.s
 
+source/util/util_print.o: source/util/util_print.cpp.o
+.PHONY : source/util/util_print.o
+
+# target to build an object file
+source/util/util_print.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/util/util_print.cpp.o
+.PHONY : source/util/util_print.cpp.o
+
+source/util/util_print.i: source/util/util_print.cpp.i
+.PHONY : source/util/util_print.i
+
+# target to preprocess a source file
+source/util/util_print.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/util/util_print.cpp.i
+.PHONY : source/util/util_print.cpp.i
+
+source/util/util_print.s: source/util/util_print.cpp.s
+.PHONY : source/util/util_print.s
+
+# target to generate assembly for a file
+source/util/util_print.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/instance_messenger_server.dir/build.make CMakeFiles/instance_messenger_server.dir/source/util/util_print.cpp.s
+.PHONY : source/util/util_print.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -507,6 +555,9 @@ help:
 	@echo "... source/core/config/manage_config.o"
 	@echo "... source/core/config/manage_config.i"
 	@echo "... source/core/config/manage_config.s"
+	@echo "... source/core/config/manage_config_update.o"
+	@echo "... source/core/config/manage_config_update.i"
+	@echo "... source/core/config/manage_config_update.s"
 	@echo "... source/core/database/base_database.o"
 	@echo "... source/core/database/base_database.i"
 	@echo "... source/core/database/base_database.s"
@@ -543,6 +594,9 @@ help:
 	@echo "... source/util/util_json.o"
 	@echo "... source/util/util_json.i"
 	@echo "... source/util/util_json.s"
+	@echo "... source/util/util_print.o"
+	@echo "... source/util/util_print.i"
+	@echo "... source/util/util_print.s"
 .PHONY : help
 
 
