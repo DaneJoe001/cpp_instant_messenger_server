@@ -24,7 +24,7 @@ DatabaseMySQL::~DatabaseMySQL()
     m_driver.reset();
 }
 
-void DatabaseMySQL::connect() {
+bool DatabaseMySQL::connect() {
     try
     {
         m_logger->info("正在连接到 MySQL 数据库...");
@@ -39,9 +39,8 @@ void DatabaseMySQL::connect() {
         // 检查连接是否成功
         if (!m_connection)
         {
-            m_logger->error("无法创建数据库连接");
+            m_logger->error("无法创建数据库连接" + m_error_message);
             m_error_message = "无法创建数据库连接";
-            std::cerr << "错误: " << m_error_message << std::endl;
             throw sql::SQLException(m_error_message);
         }
 
@@ -49,6 +48,7 @@ void DatabaseMySQL::connect() {
         m_connection->setSchema(m_config.database_name);
 
         m_logger->info("MySQL 数据库连接成功!");
+        return true;
     }
     catch (sql::SQLException& e)
     {
@@ -59,9 +59,10 @@ void DatabaseMySQL::connect() {
         m_logger->error("MySQL 错误位置: " + std::string(e.getSQLState()));
         throw;
     }
+    return false;
 }
 
-void DatabaseMySQL::execute(const std::string& statement)
+bool DatabaseMySQL::execute(const std::string& statement)
 {
     try
     {
@@ -71,7 +72,7 @@ void DatabaseMySQL::execute(const std::string& statement)
             m_error_code = "-1";
             m_logger->error("MySQL 错误码: " + m_error_code);
             m_logger->error("MySQL 错误信息: " + m_error_message);
-            return;
+            return false;
         }
         m_logger->trace("执行 SQL: " + statement);
 
@@ -100,6 +101,8 @@ void DatabaseMySQL::execute(const std::string& statement)
             m_error_code = std::to_string(warning->getErrorCode());
             m_logger->warn("更新执行警告,错误码: " + m_error_code + ",错误信息: " + m_error_message);
         }
+        return true;
+
     }
     catch (sql::SQLException& e)
     {
@@ -108,6 +111,7 @@ void DatabaseMySQL::execute(const std::string& statement)
         m_logger->error("MySQL 执行错误: " + m_error_message);
         m_logger->error("SQL 状态: " + e.getSQLState());
     }
+    return false;
 }
 
 std::vector<std::vector<std::string>> DatabaseMySQL::query(const std::string& statement)

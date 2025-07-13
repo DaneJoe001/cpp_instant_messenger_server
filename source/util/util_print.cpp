@@ -50,7 +50,7 @@ std::string UtilPrint::get_log_str(LogLevel level, std::string info, OutputSetti
     std::string log_str;
     if (output_setting.is_time_visible)
     {
-        log_str += add_bracket(BracketType::SQUARE, UtilTime::get_time_str());
+        log_str += add_bracket(BracketType::SQUARE, UtilTime::get_now_time_str());
         log_str += " ";
     }
     if (output_setting.is_level_visible)
@@ -76,7 +76,7 @@ std::string UtilPrint::get_log_str(LogLevel level, std::string info, OutputSetti
 #endif
         log_str += " ";
     }
-    return log_level_str + " " + info;
+    return log_str + " " + info;
 }
 
 std::string UtilPrint::add_str(std::string str, std::string addition, AddPosition pos)

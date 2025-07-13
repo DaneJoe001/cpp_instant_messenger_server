@@ -1,13 +1,16 @@
 #include <iostream>
 
-#include "core/network/base_network.hpp"
 #include "main/check_main.hpp"
+#include "main/check_data.hpp"
+#include "core/network/base_network.hpp"
 #include "core/util/util_print.hpp"
 
-#define CHECK 1
+static UtilPrint::OutputSetting g_output_setting;
+
+#define CHECK 9
 int main(void)
 {
-
+    init_users();
 #if CHECK==0
     UtilPrint::print("[INFO]", "检查日志系统");
     check_danejoe_log();
@@ -54,5 +57,9 @@ int main(void)
     UtilPrint::print("hello world");
     std::cout << UtilPrint::add_bracket(UtilPrint::BracketType::SQUARE, "TEST") << std::endl;
     UtilPrint::print(UtilPrint::LogLevel::TRACE, "日志测试", UtilPrint::OutputSetting());
+#endif
+#if CHECK==9
+    UtilPrint::print(UtilPrint::LogLevel::INFO, "测试用户数据访问", g_output_setting);
+    check_access_user();
 #endif
 }

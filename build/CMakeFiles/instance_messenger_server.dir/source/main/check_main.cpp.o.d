@@ -1,8 +1,9 @@
 CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/source/main/check_main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
- /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
+ /usr/include/stdc-predef.h /usr/local/include/c++/16.0.0/iostream \
+ /usr/local/include/c++/16.0.0/bits/requires_hosted.h \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
@@ -10,17 +11,20 @@ CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
- /usr/include/c++/11/pstl/pstl_config.h /usr/include/c++/11/ostream \
- /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
- /usr/include/c++/11/bits/stringfwd.h \
- /usr/include/c++/11/bits/memoryfwd.h /usr/include/c++/11/bits/postypes.h \
- /usr/include/c++/11/cwchar /usr/include/wchar.h \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/local/include/c++/16.0.0/pstl/pstl_config.h \
+ /usr/local/include/c++/16.0.0/ostream \
+ /usr/local/include/c++/16.0.0/bits/ostream.h \
+ /usr/local/include/c++/16.0.0/ios /usr/local/include/c++/16.0.0/iosfwd \
+ /usr/local/include/c++/16.0.0/bits/stringfwd.h \
+ /usr/local/include/c++/16.0.0/bits/memoryfwd.h \
+ /usr/local/include/c++/16.0.0/bits/postypes.h \
+ /usr/local/include/c++/16.0.0/cwchar /usr/include/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/16.0.0/include-fixed/x86_64-linux-gnu/bits/floatn.h \
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/16.0.0/include-fixed/x86_64-linux-gnu/bits/floatn-common.h \
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/16.0.0/include/stddef.h \
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/16.0.0/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
@@ -29,50 +33,45 @@ CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/c++/11/exception /usr/include/c++/11/bits/exception.h \
- /usr/include/c++/11/bits/exception_ptr.h \
- /usr/include/c++/11/bits/exception_defines.h \
- /usr/include/c++/11/bits/cxxabi_init_exception.h \
- /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/hash_bytes.h \
- /usr/include/c++/11/new /usr/include/c++/11/bits/move.h \
- /usr/include/c++/11/type_traits \
- /usr/include/c++/11/bits/nested_exception.h \
- /usr/include/c++/11/bits/char_traits.h \
- /usr/include/c++/11/bits/stl_algobase.h \
- /usr/include/c++/11/bits/functexcept.h \
- /usr/include/c++/11/bits/cpp_type_traits.h \
- /usr/include/c++/11/ext/type_traits.h \
- /usr/include/c++/11/ext/numeric_traits.h \
- /usr/include/c++/11/bits/stl_pair.h /usr/include/c++/11/compare \
- /usr/include/c++/11/concepts \
- /usr/include/c++/11/bits/stl_iterator_base_types.h \
- /usr/include/c++/11/bits/iterator_concepts.h \
- /usr/include/c++/11/bits/ptr_traits.h \
- /usr/include/c++/11/bits/ranges_cmp.h \
- /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
- /usr/include/c++/11/bits/concept_check.h \
- /usr/include/c++/11/debug/assertions.h \
- /usr/include/c++/11/bits/stl_iterator.h \
- /usr/include/c++/11/bits/stl_construct.h \
- /usr/include/c++/11/debug/debug.h \
- /usr/include/c++/11/bits/predefined_ops.h /usr/include/c++/11/cstdint \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
+ /usr/local/include/c++/16.0.0/exception \
+ /usr/local/include/c++/16.0.0/bits/exception.h \
+ /usr/local/include/c++/16.0.0/bits/version.h \
+ /usr/local/include/c++/16.0.0/bits/exception_ptr.h \
+ /usr/local/include/c++/16.0.0/bits/exception_defines.h \
+ /usr/local/include/c++/16.0.0/bits/cxxabi_init_exception.h \
+ /usr/local/include/c++/16.0.0/typeinfo \
+ /usr/local/include/c++/16.0.0/bits/hash_bytes.h \
+ /usr/local/include/c++/16.0.0/new \
+ /usr/local/include/c++/16.0.0/bits/move.h \
+ /usr/local/include/c++/16.0.0/type_traits \
+ /usr/local/include/c++/16.0.0/bits/nested_exception.h \
+ /usr/local/include/c++/16.0.0/bits/char_traits.h \
+ /usr/local/include/c++/16.0.0/compare \
+ /usr/local/include/c++/16.0.0/concepts \
+ /usr/local/include/c++/16.0.0/bits/stl_construct.h \
+ /usr/local/include/c++/16.0.0/bits/stl_iterator_base_types.h \
+ /usr/local/include/c++/16.0.0/bits/iterator_concepts.h \
+ /usr/local/include/c++/16.0.0/bits/ptr_traits.h \
+ /usr/local/include/c++/16.0.0/bits/ranges_cmp.h \
+ /usr/local/include/c++/16.0.0/bits/stl_iterator_base_funcs.h \
+ /usr/local/include/c++/16.0.0/bits/concept_check.h \
+ /usr/local/include/c++/16.0.0/debug/assertions.h \
+ /usr/local/include/c++/16.0.0/bits/localefwd.h \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/c++locale.h \
+ /usr/local/include/c++/16.0.0/clocale /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h \
+ /usr/local/include/c++/16.0.0/cctype /usr/include/ctype.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
  /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/c++/11/bits/localefwd.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
- /usr/include/c++/11/clocale /usr/include/locale.h \
- /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/11/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endianness.h \
- /usr/include/c++/11/bits/ios_base.h /usr/include/c++/11/ext/atomicity.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
- /usr/include/pthread.h /usr/include/sched.h \
- /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+ /usr/local/include/c++/16.0.0/bits/ios_base.h \
+ /usr/local/include/c++/16.0.0/ext/atomicity.h \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/gthr.h \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/gthr-default.h \
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/16.0.0/include-fixed/pthread.h \
+ /usr/include/sched.h /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
@@ -95,94 +94,157 @@ CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/atomic_word.h \
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
- /usr/include/c++/11/bits/locale_classes.h /usr/include/c++/11/string \
- /usr/include/c++/11/bits/allocator.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
- /usr/include/c++/11/ext/new_allocator.h \
- /usr/include/c++/11/bits/ostream_insert.h \
- /usr/include/c++/11/bits/cxxabi_forced.h \
- /usr/include/c++/11/bits/stl_function.h \
- /usr/include/c++/11/backward/binders.h \
- /usr/include/c++/11/bits/stl_algo.h /usr/include/c++/11/cstdlib \
- /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/local/include/c++/16.0.0/bits/locale_classes.h \
+ /usr/local/include/c++/16.0.0/string \
+ /usr/local/include/c++/16.0.0/bits/allocator.h \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/c++allocator.h \
+ /usr/local/include/c++/16.0.0/bits/new_allocator.h \
+ /usr/local/include/c++/16.0.0/bits/functexcept.h \
+ /usr/local/include/c++/16.0.0/bits/cpp_type_traits.h \
+ /usr/local/include/c++/16.0.0/bits/ostream_insert.h \
+ /usr/local/include/c++/16.0.0/bits/cxxabi_forced.h \
+ /usr/local/include/c++/16.0.0/bits/stl_iterator.h \
+ /usr/local/include/c++/16.0.0/ext/type_traits.h \
+ /usr/local/include/c++/16.0.0/bits/stl_function.h \
+ /usr/local/include/c++/16.0.0/backward/binders.h \
+ /usr/local/include/c++/16.0.0/ext/numeric_traits.h \
+ /usr/local/include/c++/16.0.0/bits/stl_algobase.h \
+ /usr/local/include/c++/16.0.0/bits/stl_pair.h \
+ /usr/local/include/c++/16.0.0/bits/utility.h \
+ /usr/local/include/c++/16.0.0/debug/debug.h \
+ /usr/local/include/c++/16.0.0/bits/predefined_ops.h \
+ /usr/local/include/c++/16.0.0/bit \
+ /usr/local/include/c++/16.0.0/bits/refwrap.h \
+ /usr/local/include/c++/16.0.0/bits/invoke.h \
+ /usr/local/include/c++/16.0.0/bits/range_access.h \
+ /usr/local/include/c++/16.0.0/initializer_list \
+ /usr/local/include/c++/16.0.0/bits/basic_string.h \
+ /usr/local/include/c++/16.0.0/ext/alloc_traits.h \
+ /usr/local/include/c++/16.0.0/bits/alloc_traits.h \
+ /usr/local/include/c++/16.0.0/string_view \
+ /usr/local/include/c++/16.0.0/bits/functional_hash.h \
+ /usr/local/include/c++/16.0.0/bits/ranges_base.h \
+ /usr/local/include/c++/16.0.0/bits/max_size_type.h \
+ /usr/local/include/c++/16.0.0/numbers \
+ /usr/local/include/c++/16.0.0/bits/string_view.tcc \
+ /usr/local/include/c++/16.0.0/ext/string_conversions.h \
+ /usr/local/include/c++/16.0.0/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
  /usr/include/x86_64-linux-gnu/sys/select.h \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
  /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/c++/11/bits/std_abs.h \
- /usr/include/c++/11/bits/algorithmfwd.h \
- /usr/include/c++/11/initializer_list /usr/include/c++/11/bits/stl_heap.h \
- /usr/include/c++/11/bits/stl_tempbuf.h \
- /usr/include/c++/11/bits/uniform_int_dist.h \
- /usr/include/c++/11/bits/range_access.h \
- /usr/include/c++/11/bits/basic_string.h \
- /usr/include/c++/11/ext/alloc_traits.h \
- /usr/include/c++/11/bits/alloc_traits.h /usr/include/c++/11/string_view \
- /usr/include/c++/11/bits/functional_hash.h \
- /usr/include/c++/11/bits/ranges_base.h \
- /usr/include/c++/11/bits/max_size_type.h /usr/include/c++/11/numbers \
- /usr/include/c++/11/bits/string_view.tcc \
- /usr/include/c++/11/ext/string_conversions.h /usr/include/c++/11/cstdio \
- /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+ /usr/local/include/c++/16.0.0/bits/std_abs.h \
+ /usr/local/include/c++/16.0.0/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/c++/11/cerrno /usr/include/errno.h \
+ /usr/local/include/c++/16.0.0/cerrno /usr/include/errno.h \
  /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
  /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
- /usr/include/c++/11/bits/charconv.h \
- /usr/include/c++/11/bits/basic_string.tcc \
- /usr/include/c++/11/bits/locale_classes.tcc \
- /usr/include/c++/11/system_error \
- /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
- /usr/include/c++/11/stdexcept /usr/include/c++/11/streambuf \
- /usr/include/c++/11/bits/streambuf.tcc \
- /usr/include/c++/11/bits/basic_ios.h \
- /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
- /usr/include/c++/11/bits/streambuf_iterator.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
- /usr/include/c++/11/bits/locale_facets.tcc \
- /usr/include/c++/11/bits/basic_ios.tcc \
- /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc \
+ /usr/local/include/c++/16.0.0/bits/charconv.h \
+ /usr/local/include/c++/16.0.0/bits/basic_string.tcc \
+ /usr/local/include/c++/16.0.0/bits/memory_resource.h \
+ /usr/local/include/c++/16.0.0/cstddef \
+ /usr/local/include/c++/16.0.0/bits/uses_allocator.h \
+ /usr/local/include/c++/16.0.0/bits/uses_allocator_args.h \
+ /usr/local/include/c++/16.0.0/tuple \
+ /usr/local/include/c++/16.0.0/bits/ranges_util.h \
+ /usr/local/include/c++/16.0.0/bits/locale_classes.tcc \
+ /usr/local/include/c++/16.0.0/system_error \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/error_constants.h \
+ /usr/local/include/c++/16.0.0/stdexcept \
+ /usr/local/include/c++/16.0.0/streambuf \
+ /usr/local/include/c++/16.0.0/bits/streambuf.tcc \
+ /usr/local/include/c++/16.0.0/bits/basic_ios.h \
+ /usr/local/include/c++/16.0.0/bits/locale_facets.h \
+ /usr/local/include/c++/16.0.0/cwctype /usr/include/wctype.h \
+ /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/ctype_base.h \
+ /usr/local/include/c++/16.0.0/bits/streambuf_iterator.h \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+ /usr/local/include/c++/16.0.0/bits/locale_facets.tcc \
+ /usr/local/include/c++/16.0.0/bits/basic_ios.tcc \
+ /usr/local/include/c++/16.0.0/bits/ostream.tcc \
+ /usr/local/include/c++/16.0.0/istream \
+ /usr/local/include/c++/16.0.0/bits/istream.tcc \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/main/check_main.hpp \
+ /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/main/check_data.hpp \
+ /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/data/entity/entity_user.hpp \
+ /usr/local/include/c++/16.0.0/chrono \
+ /usr/local/include/c++/16.0.0/bits/chrono.h \
+ /usr/local/include/c++/16.0.0/ratio \
+ /usr/local/include/c++/16.0.0/cstdint \
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/16.0.0/include/stdint.h \
+ /usr/include/stdint.h /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/local/include/c++/16.0.0/limits /usr/local/include/c++/16.0.0/ctime \
+ /usr/local/include/c++/16.0.0/bits/parse_numbers.h \
+ /usr/local/include/c++/16.0.0/sstream \
+ /usr/local/include/c++/16.0.0/bits/sstream.tcc \
+ /usr/local/include/c++/16.0.0/vector \
+ /usr/local/include/c++/16.0.0/bits/stl_uninitialized.h \
+ /usr/local/include/c++/16.0.0/bits/stl_vector.h \
+ /usr/local/include/c++/16.0.0/bits/stl_bvector.h \
+ /usr/local/include/c++/16.0.0/bits/vector.tcc \
+ /usr/local/include/c++/16.0.0/bits/stl_algo.h \
+ /usr/local/include/c++/16.0.0/bits/algorithmfwd.h \
+ /usr/local/include/c++/16.0.0/bits/stl_heap.h \
+ /usr/local/include/c++/16.0.0/bits/uniform_int_dist.h \
+ /usr/local/include/c++/16.0.0/bits/stl_tempbuf.h \
+ /usr/local/include/c++/16.0.0/bits/shared_ptr.h \
+ /usr/local/include/c++/16.0.0/bits/shared_ptr_base.h \
+ /usr/local/include/c++/16.0.0/bits/allocated_ptr.h \
+ /usr/local/include/c++/16.0.0/bits/unique_ptr.h \
+ /usr/local/include/c++/16.0.0/ext/aligned_buffer.h \
+ /usr/local/include/c++/16.0.0/ext/concurrence.h \
+ /usr/local/include/c++/16.0.0/bits/align.h \
+ /usr/local/include/c++/16.0.0/bits/chrono_io.h \
+ /usr/local/include/c++/16.0.0/iomanip \
+ /usr/local/include/c++/16.0.0/locale \
+ /usr/local/include/c++/16.0.0/bits/locale_facets_nonio.h \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/time_members.h \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+ /usr/include/libintl.h /usr/local/include/c++/16.0.0/bits/codecvt.h \
+ /usr/local/include/c++/16.0.0/bits/locale_facets_nonio.tcc \
+ /usr/local/include/c++/16.0.0/bits/locale_conv.h \
+ /usr/local/include/c++/16.0.0/bits/quoted_string.h \
+ /usr/local/include/c++/16.0.0/format /usr/local/include/c++/16.0.0/array \
+ /usr/local/include/c++/16.0.0/charconv \
+ /usr/local/include/c++/16.0.0/optional \
+ /usr/local/include/c++/16.0.0/bits/enable_special_members.h \
+ /usr/local/include/c++/16.0.0/span \
+ /usr/local/include/c++/16.0.0/bits/monostate.h \
+ /usr/local/include/c++/16.0.0/bits/formatfwd.h \
+ /usr/local/include/c++/16.0.0/bits/ranges_algobase.h \
+ /usr/local/include/c++/16.0.0/bits/unicode.h \
+ /usr/local/include/c++/16.0.0/bits/unicode-data.h \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/log/manage_log.hpp \
- /usr/include/c++/11/unordered_map \
- /usr/include/c++/11/ext/aligned_buffer.h \
- /usr/include/c++/11/bits/hashtable.h \
- /usr/include/c++/11/bits/hashtable_policy.h /usr/include/c++/11/tuple \
- /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
- /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/invoke.h \
- /usr/include/c++/11/bits/enable_special_members.h \
- /usr/include/c++/11/bits/node_handle.h \
- /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/memory \
- /usr/include/c++/11/bits/stl_uninitialized.h \
- /usr/include/c++/11/bits/stl_raw_storage_iter.h \
- /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
- /usr/include/c++/11/bits/unique_ptr.h \
- /usr/include/c++/11/bits/shared_ptr.h \
- /usr/include/c++/11/bits/shared_ptr_base.h \
- /usr/include/c++/11/bits/allocated_ptr.h \
- /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/ext/concurrence.h \
- /usr/include/c++/11/bits/shared_ptr_atomic.h \
- /usr/include/c++/11/bits/atomic_base.h \
- /usr/include/c++/11/bits/atomic_lockfree_defines.h \
- /usr/include/c++/11/bits/atomic_wait.h /usr/include/c++/11/climits \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+ /usr/local/include/c++/16.0.0/unordered_map \
+ /usr/local/include/c++/16.0.0/bits/unordered_map.h \
+ /usr/local/include/c++/16.0.0/bits/hashtable.h \
+ /usr/local/include/c++/16.0.0/bits/hashtable_policy.h \
+ /usr/local/include/c++/16.0.0/bits/node_handle.h \
+ /usr/local/include/c++/16.0.0/bits/erase_if.h \
+ /usr/local/include/c++/16.0.0/memory \
+ /usr/local/include/c++/16.0.0/bits/stl_raw_storage_iter.h \
+ /usr/local/include/c++/16.0.0/bits/shared_ptr_atomic.h \
+ /usr/local/include/c++/16.0.0/bits/atomic_base.h \
+ /usr/local/include/c++/16.0.0/bits/atomic_lockfree_defines.h \
+ /usr/local/include/c++/16.0.0/bits/atomic_wait.h \
+ /usr/local/include/c++/16.0.0/climits \
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/16.0.0/include/limits.h \
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/16.0.0/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
  /usr/include/linux/limits.h \
@@ -200,53 +262,48 @@ CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
  /usr/include/x86_64-linux-gnu/bits/syscall.h \
- /usr/include/c++/11/bits/std_mutex.h \
- /usr/include/c++/11/backward/auto_ptr.h \
- /usr/include/c++/11/bits/ranges_uninitialized.h \
- /usr/include/c++/11/bits/ranges_algobase.h /usr/include/c++/11/iterator \
- /usr/include/c++/11/bits/stream_iterator.h \
- /usr/include/c++/11/bits/uses_allocator_args.h \
- /usr/include/c++/11/pstl/glue_memory_defs.h \
- /usr/include/c++/11/pstl/execution_defs.h \
+ /usr/local/include/c++/16.0.0/bits/std_mutex.h \
+ /usr/local/include/c++/16.0.0/backward/auto_ptr.h \
+ /usr/local/include/c++/16.0.0/bits/ranges_uninitialized.h \
+ /usr/local/include/c++/16.0.0/pstl/glue_memory_defs.h \
+ /usr/local/include/c++/16.0.0/pstl/execution_defs.h \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/log/base_log.hpp \
+ /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/util/util_print.hpp \
+ /usr/local/include/c++/16.0.0/mutex \
+ /usr/local/include/c++/16.0.0/bits/unique_lock.h \
+ /usr/local/include/c++/16.0.0/algorithm \
+ /usr/local/include/c++/16.0.0/bits/ranges_algo.h \
+ /usr/local/include/c++/16.0.0/pstl/glue_algorithm_defs.h \
+ /usr/local/include/c++/16.0.0/atomic \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/database/database_sqlite.hpp \
  /usr/local/include/SQLiteCpp/SQLiteCpp.h \
  /usr/local/include/SQLiteCpp/SQLiteCppExport.h \
- /usr/local/include/SQLiteCpp/Assertion.h /usr/include/c++/11/cassert \
- /usr/include/assert.h /usr/local/include/SQLiteCpp/Exception.h \
+ /usr/local/include/SQLiteCpp/Assertion.h \
+ /usr/local/include/c++/16.0.0/cassert /usr/include/assert.h \
+ /usr/local/include/SQLiteCpp/Exception.h \
  /usr/local/include/SQLiteCpp/Database.h \
  /usr/local/include/SQLiteCpp/Column.h \
  /usr/local/include/SQLiteCpp/Statement.h \
- /usr/local/include/SQLiteCpp/Utils.h /usr/include/c++/11/map \
- /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
- /usr/include/c++/11/bits/stl_multimap.h /usr/include/c++/11/filesystem \
- /usr/include/c++/11/bits/fs_fwd.h /usr/include/c++/11/chrono \
- /usr/include/c++/11/ratio /usr/include/c++/11/limits \
- /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
- /usr/include/c++/11/bits/fs_path.h /usr/include/c++/11/locale \
- /usr/include/c++/11/bits/locale_facets_nonio.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
- /usr/include/c++/11/bits/locale_facets_nonio.tcc \
- /usr/include/c++/11/bits/locale_conv.h /usr/include/c++/11/iomanip \
- /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/sstream \
- /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/codecvt \
- /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
- /usr/include/string.h /usr/include/strings.h \
- /usr/local/include/SQLiteCpp/Transaction.h \
+ /usr/local/include/SQLiteCpp/Utils.h /usr/local/include/c++/16.0.0/map \
+ /usr/local/include/c++/16.0.0/bits/stl_tree.h \
+ /usr/local/include/c++/16.0.0/bits/stl_map.h \
+ /usr/local/include/c++/16.0.0/bits/stl_multimap.h \
+ /usr/local/include/c++/16.0.0/filesystem \
+ /usr/local/include/c++/16.0.0/bits/fs_fwd.h \
+ /usr/local/include/c++/16.0.0/bits/fs_path.h \
+ /usr/local/include/c++/16.0.0/codecvt \
+ /usr/local/include/c++/16.0.0/bits/fs_dir.h \
+ /usr/local/include/c++/16.0.0/bits/fs_ops.h /usr/include/string.h \
+ /usr/include/strings.h /usr/local/include/SQLiteCpp/Transaction.h \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/database/base_database.hpp \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/database/database_mysql.hpp \
  /usr/include/mysql_driver.h /usr/include/boost/scoped_ptr.hpp \
  /usr/include/boost/smart_ptr/scoped_ptr.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
- /usr/include/boost/config/compiler/gcc.hpp /usr/include/c++/11/cstddef \
+ /usr/include/boost/config/compiler/gcc.hpp \
  /usr/include/boost/config/detail/select_stdlib_config.hpp \
- /usr/include/c++/11/version \
+ /usr/local/include/c++/16.0.0/version \
  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
  /usr/include/boost/config/detail/select_platform_config.hpp \
  /usr/include/boost/config/platform/linux.hpp \
@@ -262,13 +319,10 @@ CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: \
  /usr/include/boost/smart_ptr/detail/operator_bool.hpp \
  /usr/include/cppconn/driver.h /usr/include/cppconn/connection.h \
  /usr/include/cppconn/build_config.h /usr/include/cppconn/warning.h \
- /usr/include/cppconn/sqlstring.h /usr/include/c++/11/algorithm \
- /usr/include/c++/11/bits/ranges_algo.h \
- /usr/include/c++/11/bits/ranges_util.h \
- /usr/include/c++/11/pstl/glue_algorithm_defs.h \
- /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
- /usr/include/cppconn/variant.h /usr/include/c++/11/list \
- /usr/include/c++/11/bits/stl_list.h /usr/include/c++/11/bits/list.tcc \
+ /usr/include/cppconn/sqlstring.h /usr/include/cppconn/variant.h \
+ /usr/local/include/c++/16.0.0/list \
+ /usr/local/include/c++/16.0.0/bits/stl_list.h \
+ /usr/local/include/c++/16.0.0/bits/list.tcc \
  /usr/include/cppconn/exception.h /usr/include/mysql_connection.h \
  /usr/include/cppconn/connection.h /usr/include/boost/shared_ptr.hpp \
  /usr/include/boost/smart_ptr/shared_ptr.hpp \
@@ -286,6 +340,8 @@ CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: \
  /usr/include/boost/assert/source_location.hpp \
  /usr/include/boost/current_function.hpp \
  /usr/include/boost/exception/exception.hpp \
+ /usr/local/include/c++/16.0.0/functional \
+ /usr/local/include/c++/16.0.0/bits/std_function.h \
  /usr/include/boost/smart_ptr/detail/sp_convertible.hpp \
  /usr/include/boost/smart_ptr/detail/spinlock_pool.hpp \
  /usr/include/boost/smart_ptr/detail/spinlock.hpp \
@@ -296,26 +352,31 @@ CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: \
  /usr/include/boost/config/pragma_message.hpp \
  /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
  /usr/include/boost/smart_ptr/detail/local_counted_base.hpp \
+ /usr/local/include/c++/16.0.0/utility \
+ /usr/local/include/c++/16.0.0/bits/stl_relops.h \
  /usr/include/cppconn/prepared_statement.h \
  /usr/include/cppconn/statement.h /usr/include/cppconn/config.h \
  /usr/include/inttypes.h /usr/include/cppconn/resultset.h \
  /usr/include/cppconn/resultset_metadata.h \
  /usr/include/cppconn/datatype.h /usr/include/cppconn/resultset.h \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/log/log_danejoe.hpp \
- /usr/include/c++/11/fstream \
- /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
- /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/mutex \
- /usr/include/c++/11/bits/unique_lock.h \
+ /usr/local/include/c++/16.0.0/fstream \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/local/include/c++/16.0.0/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/local/include/c++/16.0.0/bits/fstream.tcc \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/config/manage_config.hpp \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/util/util_json.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/json.hpp \
+ /usr/local/include/c++/16.0.0/iterator \
+ /usr/local/include/c++/16.0.0/bits/stream_iterator.h \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/adl_serializer.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/abi_macros.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/from_json.hpp \
- /usr/include/c++/11/forward_list /usr/include/c++/11/bits/forward_list.h \
- /usr/include/c++/11/bits/forward_list.tcc /usr/include/c++/11/valarray \
- /usr/include/c++/11/cmath /usr/include/math.h \
+ /usr/local/include/c++/16.0.0/forward_list \
+ /usr/local/include/c++/16.0.0/bits/forward_list.h \
+ /usr/local/include/c++/16.0.0/bits/forward_list.tcc \
+ /usr/local/include/c++/16.0.0/valarray \
+ /usr/local/include/c++/16.0.0/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
@@ -325,27 +386,28 @@ CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/c++/11/bits/specfun.h /usr/include/c++/11/tr1/gamma.tcc \
- /usr/include/c++/11/tr1/special_function_util.h \
- /usr/include/c++/11/tr1/bessel_function.tcc \
- /usr/include/c++/11/tr1/beta_function.tcc \
- /usr/include/c++/11/tr1/ell_integral.tcc \
- /usr/include/c++/11/tr1/exp_integral.tcc \
- /usr/include/c++/11/tr1/hypergeometric.tcc \
- /usr/include/c++/11/tr1/legendre_function.tcc \
- /usr/include/c++/11/tr1/modified_bessel_func.tcc \
- /usr/include/c++/11/tr1/poly_hermite.tcc \
- /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /usr/include/c++/11/bits/valarray_array.h \
- /usr/include/c++/11/bits/valarray_array.tcc \
- /usr/include/c++/11/bits/valarray_before.h \
- /usr/include/c++/11/bits/slice_array.h \
- /usr/include/c++/11/bits/valarray_after.h \
- /usr/include/c++/11/bits/gslice.h \
- /usr/include/c++/11/bits/gslice_array.h \
- /usr/include/c++/11/bits/mask_array.h \
- /usr/include/c++/11/bits/indirect_array.h \
+ /usr/local/include/c++/16.0.0/bits/specfun.h \
+ /usr/local/include/c++/16.0.0/tr1/gamma.tcc \
+ /usr/local/include/c++/16.0.0/tr1/special_function_util.h \
+ /usr/local/include/c++/16.0.0/tr1/bessel_function.tcc \
+ /usr/local/include/c++/16.0.0/tr1/beta_function.tcc \
+ /usr/local/include/c++/16.0.0/tr1/ell_integral.tcc \
+ /usr/local/include/c++/16.0.0/tr1/exp_integral.tcc \
+ /usr/local/include/c++/16.0.0/tr1/hypergeometric.tcc \
+ /usr/local/include/c++/16.0.0/tr1/legendre_function.tcc \
+ /usr/local/include/c++/16.0.0/tr1/modified_bessel_func.tcc \
+ /usr/local/include/c++/16.0.0/tr1/poly_hermite.tcc \
+ /usr/local/include/c++/16.0.0/tr1/poly_laguerre.tcc \
+ /usr/local/include/c++/16.0.0/tr1/riemann_zeta.tcc \
+ /usr/local/include/c++/16.0.0/bits/valarray_array.h \
+ /usr/local/include/c++/16.0.0/bits/valarray_array.tcc \
+ /usr/local/include/c++/16.0.0/bits/valarray_before.h \
+ /usr/local/include/c++/16.0.0/bits/slice_array.h \
+ /usr/local/include/c++/16.0.0/bits/valarray_after.h \
+ /usr/local/include/c++/16.0.0/bits/gslice.h \
+ /usr/local/include/c++/16.0.0/bits/gslice_array.h \
+ /usr/local/include/c++/16.0.0/bits/mask_array.h \
+ /usr/local/include/c++/16.0.0/bits/indirect_array.h \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/exceptions.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/value_t.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_scope.hpp \
@@ -361,20 +423,20 @@ CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/call_std/end.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/json_fwd.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/string_concat.hpp \
- /usr/include/c++/11/cstring \
+ /usr/local/include/c++/16.0.0/cstring \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/identity_tag.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/std_fs.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/to_json.hpp \
- /usr/include/c++/11/optional \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/iterators/iteration_proxy.hpp \
- /usr/include/c++/11/ranges \
+ /usr/local/include/c++/16.0.0/ranges \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/string_utils.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/byte_container_with_subtype.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/hash.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/input/binary_reader.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/input/input_adapters.hpp \
- /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
- /usr/include/c++/11/pstl/glue_numeric_defs.h \
+ /usr/local/include/c++/16.0.0/numeric \
+ /usr/local/include/c++/16.0.0/bits/stl_numeric.h \
+ /usr/local/include/c++/16.0.0/pstl/glue_numeric_defs.h \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/input/json_sax.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/input/lexer.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/meta/is_sax.hpp \
@@ -391,12 +453,11 @@ CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o: \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/output/serializer.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/conversions/to_chars.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/ordered_map.hpp \
- /usr/include/c++/11/any \
+ /usr/local/include/c++/16.0.0/any \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/detail/macro_unscope.hpp \
  /home/danejoe001/develop_environment/environment_cpp/vcpkg/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/util/util_define.hpp \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/config/config_log.hpp \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/util/util_time.hpp \
  /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/config/config_database.hpp \
- /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/core/util/util_print.hpp \
- /usr/include/c++/11/atomic
+ /mnt/e/personal_code/code_cpp_project/cpp_instant_messenger_server/include/data/access/access_user.hpp

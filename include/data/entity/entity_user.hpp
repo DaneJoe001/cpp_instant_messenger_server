@@ -81,6 +81,10 @@ public:
     };
 public:
     /**
+     *  @brief 默认构造函数
+     */
+    EntityUser() = default;
+    /**
      * @brief 构造函数
      */
     EntityUser(int id, const std::string& account, const std::string& password_hash,
@@ -146,33 +150,37 @@ public:
      * @param user_type 用户类型
      */
     void set_user_type(UserType user_type);
-private:
-    /// @brief  用户ID
-    int m_user_id;
+    /**
+     *  @brief 获取用户信息字符串
+     */
+    std::string get_user_info_str()const;
+public:
+    /// @brief  用户ID(数据库内自增)
+    int m_user_id = -1;
     /// @brief 用户账号
-    std::string m_user_account;
+    std::string m_user_account = "000000";
     /// @brief 用户密码哈希
-    std::string m_password_hash;
+    std::string m_password_hash = "000000";
     /// @brief 用户昵称
-    std::string m_nick_name;
+    std::string m_nick_name = "default";
     /// @brief 用户头像URL
-    std::string m_avatar_url;
+    std::string m_avatar_url = "default";
     /// @brief 用户签名
-    std::string m_signature;
+    std::string m_signature = "default";
     /// @brief 用户状态
-    UserStatus m_user_status;
+    UserStatus m_user_status = UserStatus::Offline;
     /// @brief 上次登录时间
     std::chrono::system_clock::time_point m_last_login_time;
     /// @brief 上次登出时间
     std::chrono::system_clock::time_point m_last_logout_time;
     /// @brief 上次登录IP地址
-    std::string m_last_ip_address;
+    std::string m_last_ip_address = "0.0.0.0";
     /// @brief 上次登录设备类型
     DeviceType m_last_device_type;
     /// @brief 用户类型
-    UserType m_user_type;
+    UserType m_user_type = UserType::Normal;
     /// @brief 用户性别
-    Gender m_gender;
+    Gender m_gender = Gender::Other;
     /// @brief 用户位置
     Location m_location;
     /// @brief 用户邮箱
@@ -180,7 +188,7 @@ private:
     /// @brief 用户手机号码
     std::string m_phone;
     /// @brief 用户生日
-    std::chrono::system_clock::time_point m_age;
+    std::chrono::system_clock::time_point m_birthday;
     /// @brief 用户注册时间
     std::chrono::system_clock::time_point m_registration_time;
 };

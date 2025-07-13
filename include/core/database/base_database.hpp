@@ -71,12 +71,12 @@ public:
      * @brief 连接到数据库。
      * @note 该方法必须被实现。
      */
-    virtual void connect() = 0;
+    virtual bool connect() = 0;
     /**
      * @brief 执行操作。
      * @param statement 查询语句。
      */
-    virtual void execute(const std::string& statement) = 0;
+    virtual bool execute(const std::string& statement) = 0;
     /**
      * @brief 查询操作。
      * @param statement 查询语句。

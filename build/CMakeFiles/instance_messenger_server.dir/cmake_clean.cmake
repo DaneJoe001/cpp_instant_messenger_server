@@ -25,6 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/instance_messenger_server.dir/source/data/access/access_user.cpp.o.d"
   "CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o"
   "CMakeFiles/instance_messenger_server.dir/source/data/entity/entity_user.cpp.o.d"
+  "CMakeFiles/instance_messenger_server.dir/source/main/check_data.cpp.o"
+  "CMakeFiles/instance_messenger_server.dir/source/main/check_data.cpp.o.d"
   "CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o"
   "CMakeFiles/instance_messenger_server.dir/source/main/check_main.cpp.o.d"
   "CMakeFiles/instance_messenger_server.dir/source/main/main.cpp.o"

@@ -3,6 +3,7 @@
 
 #include "core/config/manage_config.hpp"
 #include "core/util/util_json.hpp"
+#include "core/util/util_print.hpp"
 
 void ManageConfig::set_config_path(const std::string& path)
 {
@@ -22,16 +23,12 @@ void ManageConfig::load_config()
     {
         m_config_path = DEFAULT_CONFIG_PATH;
         std::ofstream ofs(m_config_path);
-#if CONSOLE_OUTPUT_LEVEL <= CONSOLE_LEVEL_INFO
-        std::cout << "[INFO] 创建默认配置文件" << std::endl;
-#endif
+        UtilPrint::print(UtilPrint::LogLevel::INFO, "创建默认配置文件", UtilPrint::OutputSetting());
         return;
     }
     if (!std::filesystem::exists(m_config_path))
     {
-#if CONSOLE_OUTPUT_LEVEL <= CONSOLE_LEVEL_ERROR
-        std::cout << "[ERROR] 路径不存在：" << m_config_path << std::endl;
-#endif
+        UtilPrint::print(UtilPrint::LogLevel::ERROR, "路径不存在：" + m_config_path, UtilPrint::OutputSetting());
         return;
     }
     parse_config(m_config_path);
@@ -56,10 +53,7 @@ void ManageConfig::save_config()
     }
     json.add_key_and_value<nlohmann::json>(CONFIG_ITEM_STR, config_json.get_json());
 
-#if CONSOLE_OUTPUT_LEVEL <= CONSOLE_LEVEL_INFO
-    std::cout << "[INFO] 保存配置文件" << std::endl;
-    std::cout << json.get_json().dump(4) << std::endl;
-#endif
+    UtilPrint::print(UtilPrint::LogLevel::INFO, "保存配置文件" + json.get_json().dump(4), UtilPrint::OutputSetting());
     config_json.save_json_to_path(m_config_path);
 }
 
@@ -67,9 +61,7 @@ std::unordered_map<std::string, std::string> ManageConfig::get_config(const std:
 {
     if (m_config_map.find(config_type) == m_config_map.end())
     {
-#if CONSOLE_OUTPUT_LEVEL <= CONSOLE_LEVEL_WARN
-        std::cout << "[WARN] : Config not found" << std::endl;
-#endif
+        UtilPrint::print(UtilPrint::LogLevel::WARN, "Config not found", UtilPrint::OutputSetting());
         return std::unordered_map<std::string, std::string>();
     }
     return m_config_map[config_type];
@@ -80,9 +72,7 @@ std::string ManageConfig::get_config(const std::string& config_type, const std::
     {
         return m_config_map[config_type][config_key];
     }
-#if CONSOLE_OUTPUT_LEVEL <= CONSOLE_LEVEL_WARN
-    std::cout << "[WARN] : Config not found" << std::endl;
-#endif
+    UtilPrint::print(UtilPrint::LogLevel::WARN, "Config not found", UtilPrint::OutputSetting());
     return std::string();
 }
 void ManageConfig::parse_config(const std::string& path)
@@ -96,9 +86,7 @@ void ManageConfig::parse_config(const std::string& path)
     nlohmann::json config_json = json.get_value<nlohmann::json>(CONFIG_ITEM_STR, nlohmann::json());
     if (config_json.empty())
     {
-#if CONSOLE_OUTPUT_LEVEL <= CONSOLE_LEVEL_ERROR
-        std::cout << "[ERROR] 配置项不存在" << std::endl;
-#endif
+        UtilPrint::print(UtilPrint::LogLevel::ERROR, "配置项不存在", UtilPrint::OutputSetting());
         return;
     }
     /// @note 遍历一级配置项
@@ -137,9 +125,7 @@ void ManageConfig::parse_config(const std::string& path)
 void ManageConfig::add_config(const std::string& config_type, const std::string& config_key, const std::string& config_value)
 {
     m_config_map[config_type].insert({ config_key, config_value });
-#if CONSOLE_OUTPUT_LEVEL <= CONSOLE_LEVEL_TRACE
-    std::cout << "[TRACE]: " << config_type << " " << config_key << " " << config_value << std::endl;
-#endif
+    UtilPrint::print(UtilPrint::LogLevel::TRACE, config_type + " " + config_key + " " + config_value, UtilPrint::OutputSetting());
 }
 
 void ManageConfig::add_config(const std::string& config_type, std::unordered_map<std::string, std::string> config_map)

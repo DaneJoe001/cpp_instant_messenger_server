@@ -13,12 +13,13 @@ DatabaseSQLite::~DatabaseSQLite()
     // unique_ptr 会自动释放资源
 }
 
-void DatabaseSQLite::connect()
+bool DatabaseSQLite::connect()
 {
     try
     {
         // 使用 make_unique 创建 SQLite::Database 对象
         m_database = std::make_unique<SQLite::Database>(m_config.file_path(), SQLite::OPEN_READWRITE | SQLite::OPEN_CREATE);
+        return true;
     }
     catch (const SQLite::Exception& e)
     {
@@ -27,9 +28,10 @@ void DatabaseSQLite::connect()
         m_error_code = std::to_string(e.getErrorCode());
         throw;
     }
+    return false;
 }
 
-void DatabaseSQLite::execute(const std::string& statement)
+bool DatabaseSQLite::execute(const std::string& statement)
 {
     m_logger->trace("执行查询 " + statement);
     try
@@ -39,10 +41,12 @@ void DatabaseSQLite::execute(const std::string& statement)
             m_logger->error("Database not connected");
             m_error_message = "Database not connected";
             m_error_code = "-1";
-            return;
+            return false;
         }
 
         m_database->exec(statement);
+        m_logger->trace("查询完毕 " + statement);
+        return true;
     }
     catch (const SQLite::Exception& e)
     {
@@ -50,7 +54,7 @@ void DatabaseSQLite::execute(const std::string& statement)
         m_error_code = std::to_string(e.getErrorCode());
         m_logger->error(m_error_message);
     }
-    m_logger->trace("查询完毕 " + statement);
+    return false;
 }
 
 std::vector<std::vector<std::string>> DatabaseSQLite::query(const std::string& statement)

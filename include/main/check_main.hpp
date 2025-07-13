@@ -15,3 +15,5 @@ void check_config_database();
 void check_util_json();
 
 void check_util_print();
+
+void check_access_user();

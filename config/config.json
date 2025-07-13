@@ -23,7 +23,7 @@
         },
         "sqlite":
         {
-            "database_name": "CONFIG_SQLITE",
+            "database_name": "TEST.db",
             "path": "./database/"
         },
         "network":

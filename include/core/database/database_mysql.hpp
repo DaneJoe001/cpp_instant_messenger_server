@@ -27,11 +27,11 @@ public:
     /**
      * @brief 连接数据库
      */
-    virtual void connect() override;
+    virtual bool connect() override;
     /**
      * @brief 执行SQL语句
      */
-    virtual void execute(const std::string& statement) override;
+    virtual bool execute(const std::string& statement) override;
     /**
      * @brief 查询数据库
      */

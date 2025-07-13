@@ -64,6 +64,10 @@
         "optional": "cpp",
         "ranges": "cpp",
         "valarray": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "charconv": "cpp",
+        "span": "cpp",
+        "format": "cpp",
+        "text_encoding": "cpp"
     }
 }
