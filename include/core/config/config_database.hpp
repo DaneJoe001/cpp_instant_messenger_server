@@ -2,8 +2,8 @@
 
 #include <string>
 
-#include "core/config/manage_config.hpp"
 #include "core/database/base_database.hpp"
+class ManageConfig;
 
 /// @todo 调整配置结构
 /// @brief 数据库配置项名称字符串

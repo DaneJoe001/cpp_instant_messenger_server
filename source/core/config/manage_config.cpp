@@ -4,6 +4,7 @@
 #include "core/config/manage_config.hpp"
 #include "core/util/util_json.hpp"
 #include "core/util/util_print.hpp"
+#include "core/util/util_define.hpp"
 
 void ManageConfig::set_config_path(const std::string& path)
 {

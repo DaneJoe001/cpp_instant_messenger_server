@@ -8,7 +8,7 @@
 #include <cppconn/prepared_statement.h>
 #include <cppconn/resultset.h>
 
-#include <core/database/base_database.hpp>
+#include "core/database/base_database.hpp"
 
 /**
  * @class DatabaseMySQL

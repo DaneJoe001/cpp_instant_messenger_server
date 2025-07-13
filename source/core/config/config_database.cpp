@@ -1,5 +1,5 @@
 #include "core/config/config_database.hpp"
-
+#include "core/config/manage_config.hpp"
 #include "core/util/util_print.hpp"
 
 ConfigDatabase::ConfigDatabase(ManageConfig& manage_config) :m_manage_config(manage_config) {}

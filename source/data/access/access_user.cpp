@@ -1,6 +1,7 @@
 #include <format>
 #include <regex>
 
+#include "core/database/base_database.hpp"
 #include "data/access/access_user.hpp"
 
 AccessUser::AccessUser(BaseDatabase& database) :m_database(database) {}

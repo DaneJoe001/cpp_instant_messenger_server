@@ -3,7 +3,8 @@
 #include <optional>
 
 #include "data/entity/entity_user.hpp"
-#include "core/database/base_database.hpp"
+
+class BaseDatabase;
 
 /**
  * @class AccessUser
@@ -46,5 +47,6 @@ public:
      */
     bool update_user(const EntityUser& user);
 private:
+    /// @brief 数据库
     BaseDatabase& m_database;
 };

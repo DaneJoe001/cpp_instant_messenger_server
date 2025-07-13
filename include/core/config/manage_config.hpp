@@ -10,9 +10,6 @@
 #include <unordered_map>
 #include <string>
 
-#include "core/util/util_json.hpp"
-#include "core/util/util_define.hpp"
-
 /// @brief 配置项字符串
 #define CONFIG_ITEM_STR std::string("config")
 /// @brief 默认配置文件路径

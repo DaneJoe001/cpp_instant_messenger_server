@@ -25,6 +25,10 @@ public:
         auto current_time = std::chrono::system_clock::now();
         return get_time_str(current_time);
     }
+    /**
+     * @brief 获取指定时间点对应的时间字符串
+     * @param tp 时间点
+     */
     static std::string get_time_str(const std::chrono::system_clock::time_point& tp)
     {
         std::time_t time_t = std::chrono::system_clock::to_time_t(tp);

@@ -2,8 +2,9 @@
 
 #include <string>
 
-#include "core/config/manage_config.hpp"
 #include "core/log/base_log.hpp"
+
+class ManageConfig;
 
 /// @brief 日志项配置名称字符串
 #define LOG_ITEM_STR std::string("log")
